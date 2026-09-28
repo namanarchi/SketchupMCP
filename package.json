@@ -1,0 +1,22 @@
+{
+  "name": "sketchup-mcp-server",
+  "version": "1.0.0",
+  "description": "Model Context Protocol (MCP) Server for SketchUp 2025 and Antigravity IDE",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node index.js",
+    "test": "node test_client.js"
+  },
+  "keywords": [
+    "sketchup",
+    "sketchup2025",
+    "mcp",
+    "model-context-protocol",
+    "antigravity",
+    "bim",
+    "cad"
+  ],
+  "author": "namanarchi",
+  "license": "MIT"
+}
