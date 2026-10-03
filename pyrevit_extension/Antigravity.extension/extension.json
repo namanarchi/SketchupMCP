@@ -1,0 +1,7 @@
+{
+  "name": "Antigravity MCP Bridge",
+  "version": "1.0.0",
+  "description": "Antigravity IDE Model Context Protocol Bridge for Autodesk Revit via pyRevit",
+  "author": "Antigravity AI Architect Team",
+  "website": "https://github.com/namanarchi/SketchupMCP"
+}
