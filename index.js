@@ -8,14 +8,16 @@
 
 const readline = require('readline');
 const http = require('http');
+const { LAYOUT_TOOLS, handleLayoutTool } = require('./modules/layout');
+const { REVIT_TOOLS, handleRevitTool } = require('./modules/revit');
 
 const SKETCHUP_BRIDGE_URL = process.env.SKETCHUP_BRIDGE_URL || 'http://127.0.0.1:9876';
 const SERVER_NAME = 'antigravity-sketchup-bridge';
 const SERVER_VERSION = '1.0.0';
 const PROTOCOL_VERSION = '2024-11-05';
 
-// Danh sách công cụ SketchUp 2025 cung cấp cho AI
-const TOOLS = [
+// Danh sách công cụ SketchUp 3D cung cấp cho AI
+const SKETCHUP_TOOLS = [
   {
     name: 'sketchup_get_status',
     description: 'Kiểm tra trạng thái kết nối realtime tới SketchUp 2025, phiên bản, tên model đang mở, số lượng đối tượng và layer.',
@@ -137,7 +139,45 @@ const TOOLS = [
         }
       }
     }
+  },
+  {
+    name: 'sketchup_setup_isolated_scene',
+    description: 'Thiết lập Scene cô lập trên SketchUp: Chỉ hiển thị các cấu kiện/tags thuộc hạng mục được chỉ định (VD: Ký túc xá), ẩn toàn bộ các hạng mục khác; đặt camera trực giao (Parallel Projection) góc nhìn mặt bằng/mặt đứng/mặt cắt và lưu thành Scene chuẩn phục vụ LayOut.',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        scene_name: {
+          type: 'string',
+          description: 'Tên Scene cần tạo hoặc cập nhật (VD: KTX_CHI_TIET_MATBANG)'
+        },
+        include_keywords: {
+          type: 'array',
+          items: { type: 'string' },
+          description: 'Mảng các từ khóa Tag/Layer hoặc tên cấu kiện cần hiển thị (VD: ["KTX", "Ký túc xá", "Container"])'
+        },
+        view_type: {
+          type: 'string',
+          enum: ['top', 'front', 'right', 'iso', 'current'],
+          default: 'top',
+          description: 'Góc nhìn camera: top (mặt bằng), front (mặt đứng), right (mặt bên), iso (trục đo), current (giữ nguyên)'
+        },
+        camera_projection: {
+          type: 'string',
+          enum: ['parallel', 'perspective'],
+          default: 'parallel',
+          description: 'Phép chiếu camera: parallel (chiếu song song trực giao cho bản vẽ 2D), perspective (phối cảnh)'
+        }
+      },
+      required: ['scene_name']
+    }
   }
+];
+
+// Danh sách hợp nhất toàn bộ công cụ 3D SketchUp, 2D LayOut và BIM Revit 2020
+const TOOLS = [
+  ...SKETCHUP_TOOLS,
+  ...LAYOUT_TOOLS,
+  ...REVIT_TOOLS
 ];
 
 // Hàm gửi HTTP Request tới SketchUp Ruby Bridge Plugin
@@ -153,9 +193,10 @@ function callSketchUpBridge(endpoint, method = 'GET', data = null) {
       method: method,
       headers: {
         'Content-Type': 'application/json',
-        'Content-Length': Buffer.byteLength(postData)
+        'Content-Length': Buffer.byteLength(postData),
+        'Connection': 'close'
       },
-      timeout: 10000 // 10 giây timeout
+      timeout: 60000 // 60 giây timeout
     };
 
     const req = http.request(options, (res) => {
@@ -200,6 +241,28 @@ function callSketchUpBridge(endpoint, method = 'GET', data = null) {
 // Xử lý thực thi tool
 async function handleToolCall(toolName, args) {
   try {
+    // Điều hướng các công cụ SketchUp LayOut
+    if (toolName.startsWith('layout_')) {
+      const res = await handleLayoutTool(toolName, args, callSketchUpBridge);
+      return {
+        content: [{
+          type: 'text',
+          text: typeof res === 'string' ? res : JSON.stringify(res, null, 2)
+        }]
+      };
+    }
+
+    // Điều hướng các công cụ Autodesk Revit 2020
+    if (toolName.startsWith('revit_')) {
+      const res = await handleRevitTool(toolName, args);
+      return {
+        content: [{
+          type: 'text',
+          text: typeof res === 'string' ? res : JSON.stringify(res, null, 2)
+        }]
+      };
+    }
+
     switch (toolName) {
       case 'sketchup_get_status': {
         const res = await callSketchUpBridge('/health', 'GET');
@@ -277,6 +340,86 @@ async function handleToolCall(toolName, args) {
           content: [{
             type: 'text',
             text: JSON.stringify(res, null, 2)
+          }]
+        };
+      }
+
+      case 'sketchup_setup_isolated_scene': {
+        const sceneName = (args.scene_name || 'SCENE_ISOLATED').replace(/"/g, '\\"');
+        const keywords = JSON.stringify(args.include_keywords || []);
+        const viewType = args.view_type || 'top';
+        const isParallel = (args.camera_projection || 'parallel') === 'parallel';
+
+        const code = `
+          begin
+            model = Sketchup.active_model
+            model.start_operation("Cô Lập Scene", true)
+
+            kws = ${keywords}.map { |k| k.to_s.downcase.strip }
+            hidden_layers = []
+            visible_layers = []
+
+            # 1. Quản lý Tag / Layer
+            model.layers.each do |l|
+              if l.name == "Layer0" || kws.empty?
+                l.visible = true
+                visible_layers << l.name
+              else
+                matched = kws.any? { |kw| l.name.downcase.include?(kw) }
+                l.visible = matched
+                if matched
+                  visible_layers << l.name
+                else
+                  hidden_layers << l.name
+                end
+              end
+            end
+
+            # 2. Quản lý Camera
+            view = model.active_view
+            camera = view.camera
+            camera.perspective = false if ${isParallel}
+
+            case "${viewType}".downcase
+            when "top"
+              view.send_action("viewTop:") rescue Sketchup.send_action("viewTop:")
+            when "front"
+              view.send_action("viewFront:") rescue Sketchup.send_action("viewFront:")
+            when "right"
+              view.send_action("viewRight:") rescue Sketchup.send_action("viewRight:")
+            when "iso"
+              view.send_action("viewIso:") rescue Sketchup.send_action("viewIso:")
+            end
+
+            view.zoom_extents
+
+            # 3. Tạo hoặc cập nhật Scene
+            target_scene = model.pages["${sceneName}"]
+            if target_scene
+              target_scene.update(63)
+            else
+              target_scene = model.pages.add("${sceneName}")
+            end
+
+            model.commit_operation
+
+            {
+              success: true,
+              scene_name: "${sceneName}",
+              projection: ${isParallel} ? "parallel" : "perspective",
+              view_type: "${viewType}",
+              visible_layers: visible_layers,
+              hidden_layers_count: hidden_layers.size
+            }.to_json
+          rescue => e
+            { success: false, error: e.message, backtrace: e.backtrace.first(5) }.to_json
+          end
+        `;
+        const res = await callSketchUpBridge('/execute', 'POST', { code });
+        return {
+          content: [{
+            type: 'text',
+            text: typeof res.result === 'string' ? res.result : JSON.stringify(res, null, 2)
           }]
         };
       }

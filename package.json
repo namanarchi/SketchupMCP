@@ -6,7 +6,9 @@
   "type": "commonjs",
   "scripts": {
     "start": "node index.js",
-    "test": "node test_client.js"
+    "test": "node test_client.js",
+    "test:layout": "node test_layout.js",
+    "test:revit": "node test_revit.js"
   },
   "keywords": [
     "sketchup",

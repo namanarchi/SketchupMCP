@@ -43,8 +43,8 @@ white.color = Sketchup::Color.new(250, 250, 250)
 
 ## 3. Quy Tắc Dựng Hình Kết Cấu Hàng Rào & Móng
 
-- Móng hàng rào mặt tiền: Kích thước $1200\times 250\times 400\text{ mm}$, cao độ $Z \in [500, 900]\text{ mm}$.
-- Móng hàng rào các cạnh sau: Kích thước $1200\times 250\times 300\text{ mm}$, cao độ $Z \in [600, 900]\text{ mm}$.
+- Móng hàng rào mặt tiền: Kích thước mới $1300\times 600\times 500\text{ mm}$ (`Mong_Be_Tong_1300x600x500`), cao độ $Z \in [500, 1000]\text{ mm}$.
+- Móng hàng rào các cạnh bên: Kích thước mới $1300\times 600\times 400\text{ mm}$ (`Mong_Be_Tong_1300x600x400`), đặt trên nền văn phòng NEN VP, cao độ $Z \in [600, 1000]\text{ mm}$. Đỉnh móng toàn dự án đồng mức $Z = 1000\text{ mm}$.
 - **Góc hàng rào mặt tiền**: Hai góc $P_{FL} (26141.8, 50485.0)$ và $P_{FR} (58475.2, 50485.0)$ luôn quay móng và thanh chống xiên thẳng góc vào trong lòng khu đất (theo phương $-Y$).
 - Gờ chắn bánh xe: Mặt tiền $Y \in [50286, 50486]$, cao $400\text{ mm}$, rộng $200\text{ mm}$, vật liệu `Son_Vang_Den_Canh_Bao`.
 
@@ -64,3 +64,47 @@ Luôn gọi lệnh sau trước khi kết thúc tác vụ:
 ```ruby
 Sketchup.active_model.save
 ```
+
+## 6. Quy Tắc Vàng Kiểm Soát Lỗi Dựng Hình (Quality Checklist)
+1. **Số nguyên chẵn 100%**: Không dùng toạ độ lẻ phân số ($1.68, 51.7$). Mọi kích thước phải chẵn tròn ($50, 100, 200, 400, 600, 1100, 1400, 4100$).
+2. **Reset Transformation gốc**: Nhóm sàn, kết cấu chính phải reset transformation về Identity (`Geom::Transformation.new`) để phím đo `T` bắt điểm tuyệt đối.
+3. **Không đè mặt phẳng (No Coplanar/Z-Fighting)**: Không vẽ mặt phẳng đè $Z = 1\text{ mm}$ gây lỗi bắt điểm Tape Measure.
+4. **Kiểm tra Normal khi PushPull**: Luôn dùng `f.pushpull(f.normal.z > 0 ? h : -h)` để tránh đảo ngược khối.
+5. **Công thái học công trường tạm**: Cửa cabin buồng $600\text{ mm}$ (cánh $580\text{ mm}$), lavabo gọn $\le 420\text{ mm}$, hành lang $\ge 900\text{ mm}$, không va chạm cửa.
+6. **Tính tế nhị & riêng tư**: Khu nữ luôn phân khu 2 lớp (Sảnh đón/chỉnh trang + Buồng bồn cầu khép kín có cửa và khóa an toàn).
+
+---
+
+## 7. Quy Trình Chuẩn Triển Khai Bản Vẽ LayOut Chuyên Nghiệp (LayOut Master Workflow)
+
+Khi triển khai bản vẽ LayOut từ mô hình SketchUp, Agent tuân thủ nghiêm ngặt 8 yêu cầu thiết kế của Kiến trúc sư:
+
+1. **Tái sử dụng Khung Bản Vẽ Mẫu Chuẩn**:
+   - Sử dụng file template có sẵn `C:\Users\MAI KHANH\Downloads\LAYOUT KTX-KHOVT-GIACONG.layout`.
+   - Giữ nguyên Cột Khung Tên dọc bên phải ($X \in [364.5, 415.0]\text{ mm}$), Key Plan, Logo BSQUARE vàng đồng và các biến Autotext `<TenBV>`, `<SoBV>`, `<MaHS>`, `<NgayHT>`. Không tự vẽ lại khung tên từ đầu.
+2. **Lập Bảng Thống Kê Công Trình (Schedule Table)**:
+   - Bản vẽ mặt bằng bắt buộc có Bảng Thống Kê 4 cột: `STT | Tên Hạng Mục (KTX, Nhà ăn, NVS, Kho VT, Bãi gia công...) | Số Lượng | Diện Tích (m2)`.
+   - Kẻ bảng nét mảnh $0.3\text{ mm}$, tiêu đề nền xám nhạt, font `Arial` Bold $7.5\text{ pt}$, dữ liệu $7.0\text{ pt}$.
+3. **Kiểm Soát Bố Cục & Khoảng Cách Đều Nhau**:
+   - Vùng an toàn khả dụng cố định: $X \in [15.0, 360.0]\text{ mm}$, $Y \in [15.0, 282.0]\text{ mm}$. Cấm tràn ra ngoài.
+   - Khoảng hở giữa các khung nhìn cố định đều đặn: **$12.0 - 15.0\text{ mm}$**.
+   - Khung bao Viewport viền nét đứt màu xanh nhạt (`#40AEF7`, stroke $0.4\text{ mm}$).
+4. **Tự Động Tính Toán Tỷ Lệ Chuẩn (Dynamic Auto-Scale)**:
+   - Tự động lấy kích thước bao 3D của công trình ($L \times W$), tính tỷ lệ vừa vặn trong phân khu khả dụng và làm tròn xuống thang tỷ lệ tiêu chuẩn: `1:500, 1:200, 1:150, 1:100, 1:50, 1:25, 1:20`.
+   - Công trình dài $\approx 40\text{ m}$ (KTX, kho) trên A3: Luôn chọn **tỷ lệ vàng `1:150`**.
+5. **Kỷ Luật Tiếng Việt & Typography Theo File Mẫu**:
+   - 100% Tiếng Việt có dấu chuẩn Unicode (UTF-8), cấm lỗi font, cấm vỡ dấu, cấm tràn chữ ra ngoài hộp.
+   - Tiêu đề: **`Verdana` Bold Underline** ($14 - 16\text{ pt}$) kèm dòng phụ `TỶ LỆ: 1/...` ($8 - 9\text{ pt}$).
+   - Kích thước đo đạc: **`TCVN 7284`** (hoặc `Arial`/`Verdana`) cỡ $8\text{ pt}$.
+   - Mốc cao độ tầng: Ký hiệu tam giác màu xanh Cyan (`#40AEF7`), text `Verdana` Cyan ($8\text{ pt}$).
+   - Bảng ghi chú/thuyết minh: **`Arial`** rõ ràng, phân cấp gạch đầu dòng.
+6. **Thiết Lập Scene Cô Lập Triệt Để (Scene Isolation)**:
+   - Chi tiết hạng mục nào: **Chỉ hiển thị toàn bộ những gì thuộc về hạng mục đó**.
+   - Ẩn toàn bộ các tag của hạng mục khác (Nhà ăn, Nhà kho, Bãi gia công, Nền đất...). Tạo Scene riêng sạch sẽ trên SketchUp trước khi đưa sang LayOut.
+7. **Quy Chuẩn Nét Thấy Mảnh 0.01 & Chế Độ Hybrid Render**:
+   - Nét thấy của đối tượng: Đặt độ dày nét **`0.01` (Line Weight 0.01px / 0.1pt)** sắc bén, tinh xảo.
+   - Render Mode: Bắt buộc chọn **`Hybrid Render`**.
+8. **Tác Phong Chuyên Nghiệp**: Sạch sẽ, ngăn nắp, khoa học, chỉn chu, **tuyệt đối không làm nhanh đến mức cẩu thả**.
+
+
+

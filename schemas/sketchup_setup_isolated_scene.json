@@ -1,0 +1,31 @@
+{
+  "name": "sketchup_setup_isolated_scene",
+  "description": "Thiết lập Scene cô lập trên SketchUp: Chỉ hiển thị các cấu kiện/tags thuộc hạng mục được chỉ định (VD: Ký túc xá), ẩn toàn bộ các hạng mục khác; đặt camera trực giao (Parallel Projection) góc nhìn mặt bằng/mặt đứng/mặt cắt và lưu thành Scene chuẩn phục vụ LayOut.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "scene_name": {
+        "type": "string",
+        "description": "Tên Scene cần tạo hoặc cập nhật (VD: KTX_CHI_TIET_MATBANG)"
+      },
+      "include_keywords": {
+        "type": "array",
+        "items": { "type": "string" },
+        "description": "Mảng các từ khóa Tag/Layer hoặc tên cấu kiện cần hiển thị (VD: [\"KTX\", \"Ký túc xá\", \"Container\"])"
+      },
+      "view_type": {
+        "type": "string",
+        "enum": ["top", "front", "right", "iso", "current"],
+        "default": "top",
+        "description": "Góc nhìn camera: top (mặt bằng), front (mặt đứng), right (mặt bên), iso (trục đo), current (giữ nguyên)"
+      },
+      "camera_projection": {
+        "type": "string",
+        "enum": ["parallel", "perspective"],
+        "default": "parallel",
+        "description": "Phép chiếu camera: parallel (chiếu song song trực giao cho bản vẽ 2D), perspective (phối cảnh)"
+      }
+    },
+    "required": ["scene_name"]
+  }
+}

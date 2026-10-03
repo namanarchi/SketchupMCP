@@ -1,0 +1,42 @@
+{
+  "name": "layout_add_schedule_table",
+  "description": "Tự động tạo Bảng Thống Kê Hạng Mục (STT, Hạng Mục, Số Lượng, Diện Tích m², Ghi Chú) bằng Layout::Table chuẩn TCVN, đặt tại góc thoáng bản vẽ và không đè lên hình vẽ.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "layout_path": {
+        "type": "string",
+        "description": "Đường dẫn file .layout"
+      },
+      "table_title": {
+        "type": "string",
+        "default": "BẢNG THỐNG KÊ HẠNG MỤC CÔNG TRÌNH TẠM",
+        "description": "Tiêu đề bảng thống kê"
+      },
+      "items": {
+        "type": "array",
+        "description": "Danh sách các hạng mục cần thống kê",
+        "items": {
+          "type": "object",
+          "properties": {
+            "stt": { "type": "string", "description": "Số thứ tự (1, 2, 3...)" },
+            "name": { "type": "string", "description": "Tên hạng mục (Ký túc xá, Nhà ăn, Nhà vệ sinh, Kho vật tư...)" },
+            "quantity": { "type": "string", "description": "Số lượng (ví dụ: 26 module, 01 cụm...)" },
+            "area": { "type": "string", "description": "Diện tích m² (ví dụ: 460.2, 180.0...)" },
+            "note": { "type": "string", "description": "Ghi chú (Container 20ft/40ft, Nhà tiền chế...)" }
+          },
+          "required": ["stt", "name", "quantity", "area"]
+        }
+      },
+      "position": {
+        "type": "string",
+        "enum": ["top_right", "top_left", "bottom_left", "custom"],
+        "default": "top_right",
+        "description": "Vị trí đặt bảng trên trang A3 (Mặc định top_right thoáng bên phải X: 215mm, Y: 18mm)"
+      },
+      "paper_x": { "type": "number", "description": "Tọa độ X khi dùng position: custom (mm)" },
+      "paper_y": { "type": "number", "description": "Tọa độ Y khi dùng position: custom (mm)" }
+    },
+    "required": ["layout_path", "items"]
+  }
+}

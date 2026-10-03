@@ -63,7 +63,7 @@ Nếu thành công, script sẽ in thông tin model và tự động vẽ một 
 
 ---
 
-## 5. Danh Sách Công Cụ AI Cung Cấp Cho Antigravity
+### 5.1. Công Cụ Mô Hình Hóa 3D (SketchUp 2025)
 
 | Tên Tool | Chức năng | Tham số chính |
 | :--- | :--- | :--- |
@@ -75,3 +75,29 @@ Nếu thành công, script sẽ in thông tin model và tự động vẽ một 
 | `sketchup_camera_control` | Điều khiển camera (zoom extents, top, front, iso) | `action` ('zoom_extents', 'top',...) |
 | `sketchup_apply_material` | Gán màu/vật liệu cho đối tượng | `name`, `color` |
 | `sketchup_clear_model` | Xóa mô hình hoặc xóa vùng chọn | `selection_only` (boolean) |
+
+### 5.2. Công Cụ Bản Vẽ Kỹ Thuật & Hồ Sơ 2D (SketchUp LayOut)
+
+| Tên Tool | Chức năng | Tham số chính |
+| :--- | :--- | :--- |
+| `layout_get_status` | Kiểm tra trạng thái LayOut API, scenes 3D, khổ giấy hỗ trợ | Không có |
+| `layout_create_drawing` | Tạo file `.layout` (A4, A3, A2, A1) có khung bản vẽ & khung tên TCVN | `paper_size`, `orientation`, `drawing_title`,... |
+| `layout_insert_viewport` | Nhúng Viewport từ Scenes SketchUp theo tỷ lệ chuẩn (1:100, 1:50) | `layout_path`, `scene_name`, `scale`, `render_mode` |
+| `layout_add_dimension` | Gióng đường đo kích thước tuyến tính kỹ thuật trên bản vẽ | `start_x`, `start_y`, `end_x`, `end_y`, `offset` |
+| `layout_add_callout` | Gắn nhãn chỉ dẫn ghi chú cấu kiện/vật liệu kèm mũi tên | `target_x`, `target_y`, `text`, `box_x`, `box_y` |
+| `layout_export_pdf` | Xuất bản toàn bộ tài liệu LayOut ra tập tin PDF độ nét cao | `layout_path`, `output_pdf_path` |
+| `layout_open_in_gui` | Mở trực tiếp tập tin `.layout` trong ứng dụng LayOut 2025 | `layout_path` |
+| `layout_execute_ruby` | Thực thi mã Ruby can thiệp sâu vào tài liệu `Layout::Document` | `code` (string) |
+
+---
+
+## 6. Kiểm Thử Hệ Thống
+
+- **Kiểm tra 3D SketchUp**:
+  ```powershell
+  node test_client.js
+  ```
+- **Kiểm tra 2D LayOut & Xuất PDF**:
+  ```powershell
+  node test_layout.js
+  ```

@@ -521,5 +521,5 @@ unless file_loaded?(__FILE__)
   # Tự động bật server khi nạp plugin
   AntigravitySketchUpBridge.start_server
 
-  file_loaded?(__FILE__)
+  file_loaded(__FILE__)
 end

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+  <AddIn Type="Application">
+    <Name>Antigravity Revit MCP Bridge</Name>
+    <Assembly>C:\ProgramData\Autodesk\Revit\Addins\2020\RevitMCPBridge\RevitMCPBridge.dll</Assembly>
+    <FullClassName>RevitMCPBridge.RevitApp</FullClassName>
+    <ClientId>B845C22D-1A8E-4742-87B6-7B93F380A64E</ClientId>
+    <VendorId>BSQUARE</VendorId>
+    <VendorDescription>Antigravity AI BIM Automation, https://github.com/namanarchi/SketchupMCP</VendorDescription>
+  </AddIn>
+</RevitAddIns>

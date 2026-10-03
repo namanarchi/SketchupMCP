@@ -1,0 +1,6 @@
+node_modules/
+*.layout
+*.pdf
+Backup of *.layout
+.DS_Store
+Thumbs.db

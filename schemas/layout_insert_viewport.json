@@ -1,0 +1,53 @@
+{
+  "name": "layout_insert_viewport",
+  "description": "Chèn khung nhìn Viewport 3D từ SketchUp vào tài liệu LayOut. Hỗ trợ tự động tính tỷ lệ kiến trúc (scale: auto), tự động căn đều khoảng cách (preset), khóa nét thấy siêu mảnh chuẩn xác 0.01 và chế độ Hybrid Render.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "layout_path": {
+        "type": "string",
+        "description": "Đường dẫn file .layout cần chèn Viewport"
+      },
+      "model_path": {
+        "type": "string",
+        "description": "Đường dẫn file .skp (mặc định lấy model đang mở trong SketchUp)"
+      },
+      "scene_name": {
+        "type": "string",
+        "description": "Tên Scene cô lập cần hiển thị (ví dụ: KTX-MBT1, KTX-MBT2, KTX-MATDUNG, MBKTX-KVT-BGC...)"
+      },
+      "scale": {
+        "type": "string",
+        "enum": ["auto", "1:500", "1:250", "1:200", "1:150", "1:100", "1:75", "1:50", "1:25", "1:20", "1:10"],
+        "default": "1:150",
+        "description": "Tỷ lệ kiến trúc: auto (tự động so khớp không tràn viền), hoặc tỷ lệ chuẩn cố định (1:150 khuyên dùng cho A3 KTX)"
+      },
+      "render_mode": {
+        "type": "string",
+        "enum": ["hybrid", "vector", "raster"],
+        "default": "hybrid",
+        "description": "Chế độ dựng hình: hybrid (khuyên dùng - nét vector sắc bén kèm texture vật liệu)"
+      },
+      "line_weight": {
+        "type": "number",
+        "default": 0.01,
+        "description": "Độ dày nét thấy của mô hình (Mặc định 0.01 theo yêu cầu chuẩn hóa nét kiến trúc)"
+      },
+      "layout_preset": {
+        "type": "string",
+        "enum": ["full", "top_half", "bottom_half", "left_half", "right_half", "quad_1", "quad_2", "quad_3", "quad_4", "custom"],
+        "default": "full",
+        "description": "Bố cục khung nhìn trên A3: full (toàn trang an toàn), top_half (nửa trên), bottom_half (nửa dưới - cách nhau đúng 15mm), custom (tự nhập tọa độ)"
+      },
+      "paper_x": { "type": "number", "description": "Tọa độ X khi dùng layout_preset: custom (mm)" },
+      "paper_y": { "type": "number", "description": "Tọa độ Y khi dùng layout_preset: custom (mm)" },
+      "paper_width": { "type": "number", "description": "Chiều rộng khung khi dùng custom (mm)" },
+      "paper_height": { "type": "number", "description": "Chiều cao khung khi dùng custom (mm)" },
+      "title_text": {
+        "type": "string",
+        "description": "Tiêu đề bản vẽ bên dưới khung nhìn (VD: MẶT BẰNG KÝ TÚC XÁ TẦNG 1)"
+      }
+    },
+    "required": ["layout_path"]
+  }
+}

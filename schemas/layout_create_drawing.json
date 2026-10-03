@@ -1,0 +1,51 @@
+{
+  "name": "layout_create_drawing",
+  "description": "Khởi tạo tài liệu bản vẽ LayOut (.layout) mới. ƯU TIÊN TÁI SỬ DỤNG khung tên bản vẽ chuẩn BSQUARE có sẵn (không vẽ lại từ đầu), tự động cập nhật tên bản vẽ, số hiệu, mã hồ sơ, ngày tháng và người triển khai.",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "template_path": {
+        "type": "string",
+        "description": "Đường dẫn file .layout khung bản vẽ chuẩn mẫu (Mặc định tự nhận templates/BSQUARE_A3_Template.layout)"
+      },
+      "file_path": {
+        "type": "string",
+        "description": "Đường dẫn lưu file .layout xuất xưởng"
+      },
+      "drawing_title": {
+        "type": "string",
+        "description": "Tên bản vẽ kỹ thuật tiếng Việt có dấu (VD: MẶT BẰNG KÝ TÚC XÁ CÔNG NHÂN GĐ 1)"
+      },
+      "drawing_number": {
+        "type": "string",
+        "description": "Số hiệu bản vẽ (VD: KT-06)"
+      },
+      "file_code": {
+        "type": "string",
+        "description": "Mã hồ sơ dự án (VD: 2026-NVLG-PCD-AQ286.PK3-BSQ-029-MSS-001)"
+      },
+      "project_name": {
+        "type": "string",
+        "description": "Tên dự án công trình"
+      },
+      "scale_text": {
+        "type": "string",
+        "description": "Tỷ lệ ghi chú trong khung tên (VD: 1/150, 1/100, 1/50)"
+      },
+      "designer": {
+        "type": "string",
+        "description": "Người triển khai thiết kế"
+      },
+      "checker": {
+        "type": "string",
+        "description": "Người kiểm tra thiết kế"
+      },
+      "paper_size": {
+        "type": "string",
+        "enum": ["A3", "A4", "A2", "A1"],
+        "default": "A3",
+        "description": "Khổ giấy (Mặc định A3 420x297mm)"
+      }
+    }
+  }
+}
