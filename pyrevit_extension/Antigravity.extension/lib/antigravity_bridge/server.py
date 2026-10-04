@@ -31,10 +31,24 @@ class McpBridgeServer(object):
 
     @property
     def is_running(self):
-        return self._is_running
+        if self._is_running:
+            return True
+        try:
+            import socket
+            s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+            s.settimeout(0.2)
+            res = s.connect_ex(('127.0.0.1', self.port))
+            s.close()
+            if res == 0:
+                self._is_running = True
+                return True
+        except Exception:
+            pass
+        return False
 
     def start(self):
-        if self._is_running:
+        if self.is_running:
+            print("[OK] Antigravity pyRevit MCP Bridge da san sang tren cong {0}.".format(self.port))
             return True
 
         try:
@@ -47,9 +61,23 @@ class McpBridgeServer(object):
             self._thread = threading.Thread(target=self._listen_loop)
             self._thread.daemon = True
             self._thread.start()
-            print("[OK] Antigravity pyRevit MCP Bridge da khoi dong tren cong {0}".format(self.port))
+            print("[OK] Antigravity pyRevit MCP Bridge da khoi dong tren cong {0}.".format(self.port))
             return True
         except Exception as ex:
+            # Check if port is already active (e.g. pyRevit reload or background thread in Revit)
+            try:
+                import socket
+                s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+                s.settimeout(0.2)
+                res = s.connect_ex(('127.0.0.1', self.port))
+                s.close()
+                if res == 0:
+                    self._is_running = True
+                    print("[OK] Antigravity pyRevit MCP Bridge van dang hoat dong tot tren cong {0}.".format(self.port))
+                    return True
+            except Exception:
+                pass
+
             self._is_running = False
             print("[!] Loi khoi dong MCP Server tren port {0}: {1}".format(self.port, ex))
             return False
@@ -200,14 +228,25 @@ __result__ = {{"levels": created_levels, "grids": created_grids}}
 
     def _send_json(self, res, status_code, data):
         try:
-            json_str = json.dumps(data)
+            try:
+                json_str = json.dumps(data, ensure_ascii=False)
+            except Exception:
+                json_str = json.dumps(data, default=lambda o: str(o))
             bytes_data = Encoding.UTF8.GetBytes(json_str)
             res.StatusCode = status_code
             res.ContentType = "application/json; charset=utf-8"
             res.ContentLength64 = len(bytes_data)
             res.OutputStream.Write(bytes_data, 0, len(bytes_data))
-        except Exception:
-            pass
+        except Exception as ex:
+            try:
+                err_msg = json.dumps({"success": False, "error": "JSON serialize error: " + str(ex)})
+                err_bytes = Encoding.UTF8.GetBytes(err_msg)
+                res.StatusCode = 500
+                res.ContentType = "application/json; charset=utf-8"
+                res.ContentLength64 = len(err_bytes)
+                res.OutputStream.Write(err_bytes, 0, len(err_bytes))
+            except Exception:
+                pass
         finally:
             try:
                 res.Close()

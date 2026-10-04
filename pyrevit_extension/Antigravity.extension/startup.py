@@ -21,12 +21,15 @@ try:
     from antigravity_bridge.server import get_server
 
     server = get_server()
-    ext_event = ExternalEvent.Create(server.handler)
-    server.handler.set_external_event(ext_event)
-    started = server.start()
-    if started:
-        print("[Antigravity MCP Bridge] Server tu dong khoi dong thanh cong tren Port 9878.")
+    if not server.is_running:
+        ext_event = ExternalEvent.Create(server.handler)
+        server.handler.set_external_event(ext_event)
+        started = server.start()
+        if started:
+            print("[Antigravity MCP Bridge] Server tu dong khoi dong thanh cong tren Port 9878.")
+        else:
+            print("[Antigravity MCP Bridge] Chua the khoi dong HTTP Listener tren Port 9878.")
     else:
-        print("[Antigravity MCP Bridge] Chua the khoi dong HTTP Listener tren Port 9878.")
+        print("[Antigravity MCP Bridge] Server da dang hoat dong san sang tren Port 9878.")
 except Exception as ex:
     print("[Antigravity MCP Bridge] Khoi dong that bai: {0}".format(ex))

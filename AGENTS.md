@@ -95,6 +95,13 @@ Mô hình đang làm việc: `C:\Users\MAI KHANH\Downloads\VP BCH.skp`
        - Thanh giằng bụng: Thép hộp $\Box 40\times 40\times 1.5\text{ mm}$.
      - **Hệ xà gồ**: Thép hộp mạ kẽm $\Box 40\times 80\times 1.4\text{ mm}$, khoảng cách $a \approx 970 - 990\text{ mm}$ (15 đường mái Nam, 9 đường mái Bắc).
      - **Tôn lợp & phụ kiện**: Tôn sóng công nghiệp màu xanh Royal Navy `[0102_RoyalBlue]`, úp nóc tôn đỉnh $Y = 38000$, máng xối sê-nô tôn mạ kẽm $U250\times 180\text{ mm}$ và ống thoát nước PVC $\phi 114\text{ mm}$.
+7. **Hệ Mái Kho Vật Tư & Bãi Gia Công (`KHO_VAT_TU_TONG_HOP_VA_BAI_TAP_KET_L_SHAPE`)**:
+   - **Vị trí & Quy mô**: Khối nhà kho bãi dạng chữ L gồm nhánh ngang ($X \in [10220, 30220]$, $Y \in [103007, 111007]$, khẩu độ $8\text{ m}$) và nhánh dọc ($X \in [4220, 10220]$, $Y \in [111007, 133007]$, khẩu độ $6\text{ m}$).
+   - **Dầm dọc biên Eave (`Dam_Doc_ST1_Eave_*`)**: Toàn bộ chuyển đổi thành **thép hộp $\Box 50\times 100\times 1.8\text{ mm}$** (thay thế cho tiết diện cũ $60\times 120$ nằm bẹp).
+   - **Dầm dọc đỉnh nóc (`Dam_Doc_ST1_Dinh_Noc_*`)**: Thép hộp $\Box 60\times 120\times 2.0\text{ mm}$, **BẮT BUỘC đặt cạnh 120mm theo phương dọc (phương đứng chịu uốn $Z=120\text{ mm}$, $Z \in [4130, 4250]\text{ mm}$)**, ăn khớp tuyệt đối với chiều cao đỉnh vì kèo ($Z = 4250\text{ mm}$ mép trên, $Z = 4130\text{ mm}$ mép dưới).
+   - **Hệ vì kèo không quá giang & không chống đứng (Open Gable Truss)**: **Tuyệt đối KHÔNG sử dụng hệ `Qua_Giang_Day` và `Chong_Dung_Dinh`**. Toàn bộ không gian dưới đáy giàn kèo được giải phóng 100% để tối đa hóa chiều cao thông thủy xe nâng và tập kết vật tư.
+   - **Hệ xà gồ mạ kẽm C100x50x15x1.2mm (`BSQ-CHUNG-XA-GO-MAI`)**: Thay thế hoàn toàn hệ xà gồ thép hộp cũ $30\times 70\text{ mm}$ (`He_Xa_Go_Mai_Thep_Hop_30x70`) bằng xà gồ mạ kẽm chữ C chuẩn $C100\times 50\times 15\times 1.2\text{ mm}$.
+   - **Kỷ luật bảo tồn Scene & Tag**: Toàn bộ các cấu kiện trên phải giữ nguyên Tag hệ thống (`BSQ-CHUNG-XA-GO-MAI`, `BSQ-CHUNG-COT-THEP`, `BSQ-CHUNG-KHUNG-VI-KEO`), tuyệt đối không tạo Tag mới làm sai lệch 48 Scene hiện hữu.
 
 ---
 
@@ -295,5 +302,112 @@ Khi khởi tạo hoặc xuất bản tài liệu hồ sơ bản vẽ LayOut (.la
     - Chi tiết hạng mục nào: **Chỉ hiển thị toàn bộ những gì thuộc về hạng mục đó**.
     - **Ẩn toàn bộ các nhóm/tag khác không liên quan**.
     - Tự động tính toán tỷ lệ khung nhìn lọt lòng vừa vặn (ví dụ KTX dài $40\text{ m}$ -> tỷ lệ vàng `1:150` trên A3).
+
+---
+
+## 8. Danh Mục Quy Chuẩn Mô Hình Hóa BIM Revit & Phòng Chống Cảnh Báo Trùng Lặp (Revit Quality & Zero-Warning Rules)
+
+Khi khởi tạo, dựng hình hoặc điều chỉnh mô hình Autodesk Revit qua pyRevit, Agent bắt buộc phải tuân thủ nghiêm ngặt 7 quy chuẩn kiểm soát chất lượng sau để duy trì mục tiêu **Zero Warnings (0 Cảnh Báo)**:
+
+### Nhóm 24: Quy Tắc Cấm Trùng Lặp Hình Học Tuyệt Đối (Zero Exact Duplicate Rule)
+* **Hiện tượng**: Xuất hiện hai hoặc nhiều cấu kiện (Wall, Floor, Column, DirectShape) có cùng tọa độ tim, cùng điểm đầu/điểm cuối hoặc đè khít lên nhau 100%.
+* **Hậu quả**: Làm sai lệch gấp đôi khối lượng bóc tách (QTO), gây lag mô hình và hiển thị chớp giật vân bề mặt.
+* **Quy chuẩn bắt buộc**:
+  - Trước khi dựng bất kỳ cấu kiện nào, kiểm tra tọa độ xem vị trí đó đã có cấu kiện cùng loại hay chưa.
+  - Tuyệt đối không gọi lệnh tạo lại (duplicate) cấu kiện đã tồn tại. Nếu cần cập nhật, thực hiện sửa thuộc tính thay vì tạo đè.
+
+### Nhóm 25: Quy Tắc Vách Ngăn Đơn Giữa Các Module Liền Kề (Single Partition Discipline)
+* **Hiện tượng**: Khi đặt hai khối container hoặc hai buồng cạnh nhau (khoảng cách khe hở $\le 100\text{ mm}$), hệ thống dựng hai bức tường dày độc lập sát nhau, dẫn đến cảnh báo nghiêm trọng: `Highlighted walls overlap. One of them may be ignored when Revit finds room boundaries.`
+* **Quy chuẩn bắt buộc**:
+  - Giữa hai khối module/container tiếp giáp, **chỉ được phép tồn tại duy nhất 1 vách ngăn đơn (Single Partition Wall)**.
+  - Tuyệt đối không tạo tường đôi áp sát nhau gây xung đột hình học trong Revit.
+
+### Nhóm 26: Quy Tắc Chiều Dày Vách Phù Hợp Thực Tế Công Trình (Wall Thickness Context)
+* **Hiện tượng**: Sử dụng loại tường gạch kết cấu dày $350 - 460\text{ mm}$ (`Exterior - Brick on Mtl. Stud`) cho công trình tạm, vách container hoặc nhà bảo vệ.
+* **Quy chuẩn bắt buộc**:
+  - Vách container, vách cabin bảo vệ và vách ngăn nội bộ công trường tạm phải sử dụng loại vách mỏng phù hợp: **Panel EPS/PU dày $50 - 100\text{ mm}$** (`AI_Panel_White`).
+  - Tường gạch dày chỉ áp dụng cho khối xây kiên cố thực tế (như bể tự hoại ngầm, tường rào gạch chịu lực).
+
+### Nhóm 27: Quy Tắc Phân Định Nền Sàn Kỹ Thuật & Địa Hình Ranh Đất (Floor vs Topography Discipline)
+* **Hiện tượng**: Dựng nền đất tự nhiên toàn dự án dưới dạng một tấm sàn `DB.Floor` dày $400\text{ mm}$ bao trùm toàn khu đất. Do tấm sàn này bao trùm các sàn bê tông công trình, Revit phát sinh hàng loạt cảnh báo `Highlighted floors overlap.`
+* **Quy chuẩn bắt buộc**:
+  - Sàn `DB.Floor` **chỉ dành cho sàn bê tông hoàn thiện, sàn kỹ thuật và móng công trình** (`NỀN BÊ TÔNG BT100`).
+  - Nền đất tự nhiên tổng thể phải được quản lý bằng đối tượng địa hình (Topography / Subregion / Site) hoặc đục thủng footprint (Donut Opening) tại vị trí các khối nhà, nghiêm cấm đặt tấm sàn Floor dày cắt xuyên qua các sàn nhà xưởng.
+
+### Nhóm 28: Quy Tắc Bắt Điểm Liền Mép Không Chồng Lấn Ranh Giới Sàn (Slab Boundary Non-Collision)
+* **Hiện tượng**: Ranh giới đa giác của 2 sàn bê tông liền kề (ví dụ: Sàn Kho vật tư và Sàn Bãi đỗ xe) bị đè lên nhau ở mép tiếp giáp do nhập tọa độ sai lệch.
+* **Quy chuẩn bắt buộc**:
+  - Mọi cạnh tiếp giáp giữa các sàn liền kề **bắt buộc phải chia sẻ chung tọa độ đỉnh (Shared Boundary Edges)**.
+  - Nghiêm cấm tạo các đa giác sàn đè lấn lên nhau dù chỉ $1\text{ mm}$.
+
+### Nhóm 29: Quy Tắc Phân Cấp Tường Dài & Buồng Phòng Nhỏ (Continuous Wall vs Room Partitions)
+* **Hiện tượng**: Đã dựng các vách ngăn chi tiết của từng phòng/container ($3\text{ m}$), nhưng lại vẽ thêm một bức tường dài suốt mặt tiền ($38.75\text{ m}$) cắt xuyên qua tim của toàn bộ các vách buồng.
+* **Quy chuẩn bắt buộc**:
+  - Nếu đã có vách ngăn chi tiết từng buồng: Bức tường hành lang mặt tiền phải được chia đoạn theo khẩu độ từng buồng hoặc bắt mút tại các điểm giao cắt.
+  - Tuyệt đối không để một bức tường dài đơn nhất đè chồng lên tim các đoạn tường nhỏ bên trong.
+
+### Nhóm 30: Quy Trình Tự Động Kiểm Toán & Tiêu Chuẩn Zero Warnings (Audit Warnings Mandate)
+* **Quy chuẩn bắt buộc**:
+  - Sau mỗi đợt dựng hình hoặc điều chỉnh mô hình trong Revit, Agent **bắt buộc phải chạy script kiểm toán toàn diện**:
+    ```python
+    warnings = doc.GetWarnings()
+    ```
+  - Nếu số lượng Warnings $> 0$, Agent phải lập tức phân tích danh sách `w.GetFailingElements()`, định vị nguyên nhân và xử lý triệt để ngay trong phiên làm việc.
+  - Mục tiêu nghiệm thu bắt buộc: **Mô hình Revit phải đạt chuẩn Zero Warnings (0 Cảnh Báo)**.
+
+---
+
+## 9. Danh Mục Quy Chuẩn Phân Định Tag Theo Phân Khu, Bảo Tồn Scene & Kết Cấu Hệ Mái Kho Bãi
+
+Khi chỉnh sửa, thay thế hoặc nâng cấp bất kỳ cấu kiện nào trong mô hình SketchUp (đặc biệt là hệ mái kho vật tư, khu gia công, ký túc xá, nhà ăn), Agent bắt buộc phải tuân thủ nghiêm ngặt 3 quy chuẩn sau:
+
+### Nhóm 31: Quy Chuẩn Phân Định Tag Chuyên Biệt Theo Phân Khu - CẤM DÙNG CHUNG TAG (Zone-Specific Tag Mandate)
+* **Hiện tượng**: Dùng chung một tag (ví dụ: `BSQ-CHUNG-XA-GO-MAI`, `BSQ-CHUNG-COT-THEP`, `BSQ-CHUNG-KHUNG-VI-KEO`) cho nhiều phân khu công trình khác nhau (như cùng gán cho cả Ký túc xá, Nhà ăn, Kho vật tư, Bãi gia công).
+* **Hậu quả tai hại**: 
+  - Khi người dùng muốn tạo View/Scene độc lập cho một phân khu cụ thể (ví dụ: View chi tiết Kho Vật Tư), việc bật Tag xà gồ hay cột thép sẽ kéo theo toàn bộ xà gồ, cột thép của Ký túc xá và Nhà ăn hiện lộn xộn trong nền, làm "dính" các khu vực vào nhau, không thể xuất hồ sơ bản vẽ trích đoạn sạch sẽ.
+  - Ngược lại, khi mở Scene chi tiết Ký túc xá, cấu kiện của Kho vật tư lại lọt vào khung nhìn.
+* **Quy chuẩn bắt buộc**:
+  - **Mỗi phân khu công trình BẮT BUỘC sở hữu trường tên Tag riêng biệt, TUYỆT ĐỐI KHÔNG DÙNG CHUNG**:
+    - **Phân khu Kho Vật Tư & Bãi Gia Công**: Mang tiền tố chuẩn **`BSQ-KHO-BAI-`**:
+      - `BSQ-KHO-BAI-XA-GO-MAI` (Toàn bộ xà gồ mái Kho vật tư & Bãi gia công).
+      - `BSQ-KHO-BAI-KHUNG-VI-KEO` (Toàn bộ khung vì kèo Kho vật tư & Bãi gia công).
+      - `BSQ-KHO-BAI-COT-THEP` (Toàn bộ cột thép, dầm dọc biên Eave, dầm dọc đỉnh nóc Kho & Bãi).
+      - `BSQ-KHO-BAI-MAI-TON` (Tấm lợp tôn và phụ kiện úp nóc Kho & Bãi).
+      - `BSQ-KHO-BAI-SAN-BE-TONG` (Nền bê tông hoàn thiện Kho & Bãi).
+    - **Phân khu Ký Túc Xá**: Tiền tố **`BSQ-KTX-`**.
+    - **Phân khu Nhà Ăn / Cantin**: Tiền tố **`BSQ-CANTIN-`**.
+    - **Phân khu Nhà Vệ Sinh**: Tiền tố **`BSQ-NVS-`**.
+    - **Phân khu Văn Phòng Kho**: Tiền tố **`BSQ-VP-KHO-`**.
+  - **Quy trình đồng bộ Scene tự động khi khởi tạo Tag phân khu**:
+    - Khi tạo mới các Tag phân khu (như `BSQ-KHO-BAI-...`), Agent **bắt buộc chạy script Ruby cập nhật layer visibility trên toàn bộ các Scene hiện hữu**:
+      ```ruby
+      model.pages.each do |page|
+        # Ẩn tag Kho Bãi trên các Scene của phân khu khác (KTX, Cantin, NVS)
+        if page.name =~ /(ktx|ctin|cantin|nvs|bth)/i
+          page.set_visibility(layer_kho_bai, false)
+        # Bật tag Kho Bãi trên các Scene của phân khu Kho Bãi
+        elsif page.name =~ /(kho|gia cong|bai)/i
+          page.set_visibility(layer_kho_bai, true)
+        end
+      end
+      ```
+    - Đảm bảo đạt mục tiêu kép: **(1) Tách view cô lập tuyệt đối cho từng phân khu không bị dính chùm; (2) Không làm hỏng hoặc xáo trộn bất kỳ Scene nào, người dùng không phải thiết lập lại**.
+
+### Nhóm 32: Kỷ Luật Gắn Tag Phân Cấp & Chống Chồng Chéo Lồng Ghép (Tag Hierarchy & Non-Overlapping Discipline)
+* **Hiện tượng**: Gán Tag con khác loại đè lên Tag cha, hoặc gán Tag trực tiếp cho các cạnh (Edge) và mặt phẳng (Face) thô bên trong Group.
+* **Quy chuẩn bắt buộc**:
+  - **Quy tắc Untagged Primitives**: 100% Edges và Faces thô bên trong Group/Component luôn luôn nằm ở **`Layer0` (Untagged)**.
+  - **Gán Tag duy nhất ở cấp Group/Component bao bọc ngoài cùng**: Mỗi cấu kiện vật lý hoàn chỉnh chỉ mang 1 Tag quản lý duy nhất theo đúng phân khu chức năng.
+  - Các đối tượng không được chồng chéo Tag hoặc lồng ghép Tag mâu thuẫn vào nhau.
+
+### Nhóm 33: Kỷ Luật Tiết Diện Thép Hộp Đứng & Xà Gồ C Mạ Kẽm Kho Bãi (Strong-Axis Beam & C-Purlin Standard)
+* **Quy chuẩn bắt buộc**:
+  - **Dầm dọc đỉnh nóc (`Dam_Doc_ST1_Dinh_Noc_*`)**: Thép hộp $60\times 120\times 2.0\text{ mm}$ **BẮT BUỘC đặt cạnh 120mm theo phương dọc (phương đứng chịu uốn $Z=120\text{ mm}$, $Z \in [4130, 4250]\text{ mm}$)**. Chiều rộng ngang là $60\text{ mm}$, căn đúng tim đỉnh nóc ($Y=107007\text{ mm}$ cho nhánh ngang, $X=7220\text{ mm}$ cho nhánh dọc), ăn khớp phẳng mặt với đỉnh vì kèo. Tag: `BSQ-KHO-BAI-COT-THEP`.
+  - **Dầm dọc biên Eave (`Dam_Doc_ST1_Eave_*`)**: Toàn bộ chuyển thành thép hộp $\Box 50\times 100\times 1.8\text{ mm}$ đặt chuẩn trục, đỉnh dầm đỡ chân kèo tại $Z = 3675\text{ mm}$. Tag: `BSQ-KHO-BAI-COT-THEP`.
+  - **Loại bỏ quá giang và chống đứng**: Các vì kèo Kho VT và Khu gia công chuyển thành dạng **kèo hở không quá giang đáy (`Qua_Giang_Day`) và không chống đứng nóc (`Chong_Dung_Dinh`)**, tăng tối đa không gian lọt lòng bên dưới. Tag: `BSQ-KHO-BAI-KHUNG-VI-KEO`.
+  - **Xà gồ C mạ kẽm $C100\times 50\times 15\times 1.2\text{ mm}$**: Thay thế thép hộp cũ $30\times 70\text{ mm}$, tiết diện chữ C bản bụng $100\text{ mm}$, 2 cánh $50\text{ mm}$, mép gấp $15\text{ mm}$, bề dày $1.2\text{ mm}$, đặt tựa trên cánh trên vì kèo theo độ dốc mái. Tag: `BSQ-KHO-BAI-XA-GO-MAI`.
+
+
+
 
 

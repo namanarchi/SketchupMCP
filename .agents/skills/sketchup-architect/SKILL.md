@@ -72,6 +72,14 @@ Sketchup.active_model.save
 4. **Kiểm tra Normal khi PushPull**: Luôn dùng `f.pushpull(f.normal.z > 0 ? h : -h)` để tránh đảo ngược khối.
 5. **Công thái học công trường tạm**: Cửa cabin buồng $600\text{ mm}$ (cánh $580\text{ mm}$), lavabo gọn $\le 420\text{ mm}$, hành lang $\ge 900\text{ mm}$, không va chạm cửa.
 6. **Tính tế nhị & riêng tư**: Khu nữ luôn phân khu 2 lớp (Sảnh đón/chỉnh trang + Buồng bồn cầu khép kín có cửa và khóa an toàn).
+7. **Phân định Tag theo phân khu - CẤM DÙNG CHUNG TAG**: Mỗi phân khu công trình bắt buộc có trường tên Tag riêng biệt mang tiền tố định danh (Kho Bãi: `BSQ-KHO-BAI-...`, KTX: `BSQ-KTX-...`, Cantin: `BSQ-CANTIN-...`, NVS: `BSQ-NVS-...`). Tuyệt đối không dùng chung tag `BSQ-CHUNG-...` để tránh việc bật/tắt view phân khu này làm dính cấu kiện phân khu khác.
+8. **Kỷ luật gắn Tag phân cấp & Không chồng chéo**: 100% Face và Edge thô luôn ở `Layer0` (Untagged). Chỉ có Group/Component cấp ngoài cùng mới mang Tag. Cấm gán Tag con khác loại lồng trong Tag cha.
+9. **Quy chuẩn kết cấu hệ mái Kho Bãi**:
+   - Dầm dọc đỉnh nóc `Dam_Doc_ST1_Dinh_Noc_*`: Thép hộp $60\times 120\times 2.0\text{ mm}$, **bắt buộc đặt cạnh 120mm theo phương dọc (phương đứng chịu uốn $Z=120\text{ mm}$, $Z \in [4130, 4250]\text{ mm}$)**. Tag: `BSQ-KHO-BAI-COT-THEP`.
+   - Dầm dọc biên Eave `Dam_Doc_ST1_Eave_*`: Thép hộp $\Box 50\times 100\times 1.8\text{ mm}$. Tag: `BSQ-KHO-BAI-COT-THEP`.
+   - Kèo hở thông thủy: **Không sử dụng hệ `Qua_Giang_Day` và `Chong_Dung_Dinh`** (xóa bỏ triệt để để tăng tối đa chiều cao lọt lòng). Tag: `BSQ-KHO-BAI-KHUNG-VI-KEO`.
+   - Xà gồ mạ kẽm: Thay `He_Xa_Go_Mai_Thep_Hop_30x70` bằng **xà gồ mạ kẽm C100x50x15x1.2mm** với Tag riêng: **`BSQ-KHO-BAI-XA-GO-MAI`**.
+   - Tự động đồng bộ Scene: Khi tạo các tag `BSQ-KHO-BAI-...` mới, tự động ẩn trên các Scene KTX, Cantin, NVS và bật trên các Scene Kho Bãi để cách ly tầm nhìn 100%.
 
 ---
 

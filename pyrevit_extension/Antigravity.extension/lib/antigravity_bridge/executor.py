@@ -147,9 +147,21 @@ class McpExternalEventHandler(IExternalEventHandler):
         finally:
             sys.stdout = old_stdout
             sys.stderr = old_stderr
-            res_data["output"] = redirected_out.getvalue()
+            raw_out = redirected_out.getvalue()
+            try:
+                if isinstance(raw_out, str):
+                    res_data["output"] = raw_out.decode('utf-8', 'replace')
+                else:
+                    res_data["output"] = unicode(raw_out)
+            except Exception:
+                res_data["output"] = str(raw_out)
+
             if redirected_err.getvalue():
-                res_data["output"] += "\n[STDERR]: " + redirected_err.getvalue()
+                raw_err = redirected_err.getvalue()
+                try:
+                    res_data["output"] += u"\n[STDERR]: " + (raw_err.decode('utf-8', 'replace') if isinstance(raw_err, str) else unicode(raw_err))
+                except Exception:
+                    res_data["output"] += "\n[STDERR]: " + str(raw_err)
 
             self._task_result = res_data
             self._pending_task = None

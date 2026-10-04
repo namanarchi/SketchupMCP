@@ -241,8 +241,8 @@ function callBridgeUrl(baseUrl, endpoint, method = 'GET', data = null, timeoutMs
       path: url.pathname + url.search,
       method: method,
       headers: {
-        'Content-Type': 'application/json',
-        'Content-Length': Buffer.byteLength(postData),
+        'Content-Type': 'application/json; charset=utf-8',
+        'Content-Length': Buffer.byteLength(postData, 'utf8'),
         'Connection': 'close'
       },
       timeout: timeoutMs
