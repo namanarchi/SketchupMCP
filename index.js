@@ -10,6 +10,7 @@ const readline = require('readline');
 const http = require('http');
 const { LAYOUT_TOOLS, handleLayoutTool } = require('./modules/layout');
 const { REVIT_TOOLS, handleRevitTool } = require('./modules/revit');
+const { OFFICE_TOOLS, handleOfficeTool } = require('./modules/office');
 
 const SKETCHUP_BRIDGE_URL = process.env.SKETCHUP_BRIDGE_URL || 'http://127.0.0.1:9876';
 const SERVER_NAME = 'antigravity-sketchup-bridge';
@@ -173,11 +174,12 @@ const SKETCHUP_TOOLS = [
   }
 ];
 
-// Danh sách hợp nhất toàn bộ công cụ 3D SketchUp, 2D LayOut và BIM Revit 2020
+// Danh sách hợp nhất toàn bộ công cụ 3D SketchUp, 2D LayOut, BIM Revit 2020 và MS Office (Excel & Word)
 const TOOLS = [
   ...SKETCHUP_TOOLS,
   ...LAYOUT_TOOLS,
-  ...REVIT_TOOLS
+  ...REVIT_TOOLS,
+  ...OFFICE_TOOLS
 ];
 
 // Hàm gửi HTTP Request tới SketchUp Ruby Bridge Plugin
@@ -255,6 +257,17 @@ async function handleToolCall(toolName, args) {
     // Điều hướng các công cụ Autodesk Revit 2020
     if (toolName.startsWith('revit_')) {
       const res = await handleRevitTool(toolName, args);
+      return {
+        content: [{
+          type: 'text',
+          text: typeof res === 'string' ? res : JSON.stringify(res, null, 2)
+        }]
+      };
+    }
+
+    // Điều hướng các công cụ Microsoft Office (Excel & Word)
+    if (toolName.startsWith('excel_') || toolName.startsWith('word_') || toolName.startsWith('office_')) {
+      const res = await handleOfficeTool(toolName, args);
       return {
         content: [{
           type: 'text',

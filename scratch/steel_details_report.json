@@ -1,0 +1,600 @@
+{
+  "kho_sample": [
+    {
+      "parent": "He_Mong_Coc_Va_Ban_Ma_Cot",
+      "name": "Mong_1",
+      "material": "Be_Tong_Mong_Mac200",
+      "layer": "BSQ-CHUNG-COT-THEP"
+    },
+    {
+      "parent": "He_Mong_Coc_Va_Ban_Ma_Cot",
+      "name": "Ban_Ma_1",
+      "material": "Ban_Ma_Thep_10mm",
+      "layer": "BSQ-CHUNG-COT-THEP"
+    },
+    {
+      "parent": "He_Mong_Coc_Va_Ban_Ma_Cot",
+      "name": "",
+      "material": "Bu_Long_Inox_M16",
+      "layer": "BSQ-CHUNG-COT-THEP"
+    },
+    {
+      "parent": "He_Mong_Coc_Va_Ban_Ma_Cot",
+      "name": "",
+      "material": "Bu_Long_Inox_M16",
+      "layer": "BSQ-CHUNG-COT-THEP"
+    },
+    {
+      "parent": "He_Mong_Coc_Va_Ban_Ma_Cot",
+      "name": "",
+      "material": "Bu_Long_Inox_M16",
+      "layer": "BSQ-CHUNG-COT-THEP"
+    },
+    {
+      "parent": "He_Mong_Coc_Va_Ban_Ma_Cot",
+      "name": "",
+      "material": "Bu_Long_Inox_M16",
+      "layer": "BSQ-CHUNG-COT-THEP"
+    },
+    {
+      "parent": "He_Mong_Coc_Va_Ban_Ma_Cot",
+      "name": "Mong_2",
+      "material": "Be_Tong_Mong_Mac200",
+      "layer": "BSQ-CHUNG-COT-THEP"
+    },
+    {
+      "parent": "He_Mong_Coc_Va_Ban_Ma_Cot",
+      "name": "Ban_Ma_2",
+      "material": "Ban_Ma_Thep_10mm",
+      "layer": "BSQ-CHUNG-COT-THEP"
+    },
+    {
+      "parent": "He_Mong_Coc_Va_Ban_Ma_Cot",
+      "name": "",
+      "material": "Bu_Long_Inox_M16",
+      "layer": "BSQ-CHUNG-COT-THEP"
+    },
+    {
+      "parent": "He_Mong_Coc_Va_Ban_Ma_Cot",
+      "name": "",
+      "material": "Bu_Long_Inox_M16",
+      "layer": "BSQ-CHUNG-COT-THEP"
+    },
+    {
+      "parent": "He_Mong_Coc_Va_Ban_Ma_Cot",
+      "name": "",
+      "material": "Bu_Long_Inox_M16",
+      "layer": "BSQ-CHUNG-COT-THEP"
+    },
+    {
+      "parent": "He_Mong_Coc_Va_Ban_Ma_Cot",
+      "name": "",
+      "material": "Bu_Long_Inox_M16",
+      "layer": "BSQ-CHUNG-COT-THEP"
+    },
+    {
+      "parent": "He_Mong_Coc_Va_Ban_Ma_Cot",
+      "name": "Mong_3",
+      "material": "Be_Tong_Mong_Mac200",
+      "layer": "BSQ-CHUNG-COT-THEP"
+    },
+    {
+      "parent": "He_Mong_Coc_Va_Ban_Ma_Cot",
+      "name": "Ban_Ma_3",
+      "material": "Ban_Ma_Thep_10mm",
+      "layer": "BSQ-CHUNG-COT-THEP"
+    },
+    {
+      "parent": "He_Mong_Coc_Va_Ban_Ma_Cot",
+      "name": "",
+      "material": "Bu_Long_Inox_M16",
+      "layer": "BSQ-CHUNG-COT-THEP"
+    },
+    {
+      "parent": "He_Mong_Coc_Va_Ban_Ma_Cot",
+      "name": "",
+      "material": "Bu_Long_Inox_M16",
+      "layer": "BSQ-CHUNG-COT-THEP"
+    },
+    {
+      "parent": "He_Mong_Coc_Va_Ban_Ma_Cot",
+      "name": "",
+      "material": "Bu_Long_Inox_M16",
+      "layer": "BSQ-CHUNG-COT-THEP"
+    },
+    {
+      "parent": "He_Mong_Coc_Va_Ban_Ma_Cot",
+      "name": "",
+      "material": "Bu_Long_Inox_M16",
+      "layer": "BSQ-CHUNG-COT-THEP"
+    },
+    {
+      "parent": "He_Mong_Coc_Va_Ban_Ma_Cot",
+      "name": "Mong_4",
+      "material": "Be_Tong_Mong_Mac200",
+      "layer": "BSQ-CHUNG-COT-THEP"
+    },
+    {
+      "parent": "He_Mong_Coc_Va_Ban_Ma_Cot",
+      "name": "Ban_Ma_4",
+      "material": "Ban_Ma_Thep_10mm",
+      "layer": "BSQ-CHUNG-COT-THEP"
+    },
+    {
+      "parent": "He_Mong_Coc_Va_Ban_Ma_Cot",
+      "name": "",
+      "material": "Bu_Long_Inox_M16",
+      "layer": "BSQ-CHUNG-COT-THEP"
+    },
+    {
+      "parent": "He_Mong_Coc_Va_Ban_Ma_Cot",
+      "name": "",
+      "material": "Bu_Long_Inox_M16",
+      "layer": "BSQ-CHUNG-COT-THEP"
+    },
+    {
+      "parent": "He_Mong_Coc_Va_Ban_Ma_Cot",
+      "name": "",
+      "material": "Bu_Long_Inox_M16",
+      "layer": "BSQ-CHUNG-COT-THEP"
+    },
+    {
+      "parent": "He_Mong_Coc_Va_Ban_Ma_Cot",
+      "name": "",
+      "material": "Bu_Long_Inox_M16",
+      "layer": "BSQ-CHUNG-COT-THEP"
+    },
+    {
+      "parent": "He_Mong_Coc_Va_Ban_Ma_Cot",
+      "name": "Mong_5",
+      "material": "Be_Tong_Mong_Mac200",
+      "layer": "BSQ-CHUNG-COT-THEP"
+    }
+  ],
+  "kho_total": 361,
+  "kho_materials": [
+    "Be_Tong_Mong_Mac200",
+    "Ban_Ma_Thep_10mm",
+    "Bu_Long_Inox_M16",
+    "Thep_Cot_Keo_Xam_Ghi",
+    "Thep_Cot_Xam_Ghi",
+    "nil",
+    "VT_Thep_Ma_Kem_Sang",
+    "[0102_RoyalBlue]",
+    "Ton_Vach_Xam_Sang",
+    "VT_Go_Pallet_Vang",
+    "VT_Van_Khuon_Phu_Phim_Nau",
+    "VT_Bao_Xi_Mang_Kraft",
+    "VT_Khay_Chong_Tran_Vang",
+    "VT_Phuy_Sat_Xanh_Epoxy",
+    "VT_Ke_Thep_Xanh_CN",
+    "VT_Ke_Thep_Cam_CN",
+    "VT_Hop_Do_Nghe_Do"
+  ],
+  "gc_items": [
+    {
+      "parent": "He_Khung_Mai_Ton_Xuong_Gia_Cong_NT_B1_12x8m > Khung_Truc_1_X15000",
+      "name": "Mong_BT_TrucB",
+      "material": "Be_Tong_Nen_BT100",
+      "layer": "BSQ-GIA-CONG-COT-THEP"
+    },
+    {
+      "parent": "He_Khung_Mai_Ton_Xuong_Gia_Cong_NT_B1_12x8m > Khung_Truc_1_X15000",
+      "name": "Ban_Ma_TrucB",
+      "material": "Sat_Thep_Den_Mo",
+      "layer": "BSQ-GIA-CONG-COT-THEP"
+    },
+    {
+      "parent": "He_Khung_Mai_Ton_Xuong_Gia_Cong_NT_B1_12x8m > Khung_Truc_1_X15000",
+      "name": "Cot_Thep_TrucB",
+      "material": "Thep_Cot_Xam_Ghi",
+      "layer": "BSQ-GIA-CONG-COT-THEP"
+    },
+    {
+      "parent": "He_Khung_Mai_Ton_Xuong_Gia_Cong_NT_B1_12x8m > Khung_Truc_1_X15000",
+      "name": "Mong_BT_TrucA",
+      "material": "Be_Tong_Nen_BT100",
+      "layer": "BSQ-GIA-CONG-COT-THEP"
+    },
+    {
+      "parent": "He_Khung_Mai_Ton_Xuong_Gia_Cong_NT_B1_12x8m > Khung_Truc_1_X15000",
+      "name": "Ban_Ma_TrucA",
+      "material": "Sat_Thep_Den_Mo",
+      "layer": "BSQ-GIA-CONG-COT-THEP"
+    },
+    {
+      "parent": "He_Khung_Mai_Ton_Xuong_Gia_Cong_NT_B1_12x8m > Khung_Truc_1_X15000",
+      "name": "Cot_Thep_TrucA",
+      "material": "Thep_Cot_Xam_Ghi",
+      "layer": "BSQ-GIA-CONG-COT-THEP"
+    },
+    {
+      "parent": "He_Khung_Mai_Ton_Xuong_Gia_Cong_NT_B1_12x8m > Khung_Truc_1_X15000",
+      "name": "He_Keo_Mai_Khung_Hop_60x120_X15000",
+      "material": "Thep_Cot_Xam_Ghi",
+      "layer": "BSQ-GIA-CONG-KHUNG-VI-KEO"
+    },
+    {
+      "parent": "He_Khung_Mai_Ton_Xuong_Gia_Cong_NT_B1_12x8m > Khung_Truc_2_X19000",
+      "name": "Mong_BT_TrucB",
+      "material": "Be_Tong_Nen_BT100",
+      "layer": "BSQ-GIA-CONG-COT-THEP"
+    },
+    {
+      "parent": "He_Khung_Mai_Ton_Xuong_Gia_Cong_NT_B1_12x8m > Khung_Truc_2_X19000",
+      "name": "Ban_Ma_TrucB",
+      "material": "Sat_Thep_Den_Mo",
+      "layer": "BSQ-GIA-CONG-COT-THEP"
+    },
+    {
+      "parent": "He_Khung_Mai_Ton_Xuong_Gia_Cong_NT_B1_12x8m > Khung_Truc_2_X19000",
+      "name": "Cot_Thep_TrucB",
+      "material": "Thep_Cot_Xam_Ghi",
+      "layer": "BSQ-GIA-CONG-COT-THEP"
+    },
+    {
+      "parent": "He_Khung_Mai_Ton_Xuong_Gia_Cong_NT_B1_12x8m > Khung_Truc_2_X19000",
+      "name": "Mong_BT_TrucA",
+      "material": "Be_Tong_Nen_BT100",
+      "layer": "BSQ-GIA-CONG-COT-THEP"
+    },
+    {
+      "parent": "He_Khung_Mai_Ton_Xuong_Gia_Cong_NT_B1_12x8m > Khung_Truc_2_X19000",
+      "name": "Ban_Ma_TrucA",
+      "material": "Sat_Thep_Den_Mo",
+      "layer": "BSQ-GIA-CONG-COT-THEP"
+    },
+    {
+      "parent": "He_Khung_Mai_Ton_Xuong_Gia_Cong_NT_B1_12x8m > Khung_Truc_2_X19000",
+      "name": "Cot_Thep_TrucA",
+      "material": "Thep_Cot_Xam_Ghi",
+      "layer": "BSQ-GIA-CONG-COT-THEP"
+    },
+    {
+      "parent": "He_Khung_Mai_Ton_Xuong_Gia_Cong_NT_B1_12x8m > Khung_Truc_2_X19000",
+      "name": "He_Keo_Mai_Khung_Hop_60x120_X19000",
+      "material": "Thep_Cot_Xam_Ghi",
+      "layer": "BSQ-GIA-CONG-KHUNG-VI-KEO"
+    },
+    {
+      "parent": "He_Khung_Mai_Ton_Xuong_Gia_Cong_NT_B1_12x8m > Khung_Truc_3_X23000",
+      "name": "Mong_BT_TrucB",
+      "material": "Be_Tong_Nen_BT100",
+      "layer": "BSQ-GIA-CONG-COT-THEP"
+    },
+    {
+      "parent": "He_Khung_Mai_Ton_Xuong_Gia_Cong_NT_B1_12x8m > Khung_Truc_3_X23000",
+      "name": "Ban_Ma_TrucB",
+      "material": "Sat_Thep_Den_Mo",
+      "layer": "BSQ-GIA-CONG-COT-THEP"
+    },
+    {
+      "parent": "He_Khung_Mai_Ton_Xuong_Gia_Cong_NT_B1_12x8m > Khung_Truc_3_X23000",
+      "name": "Cot_Thep_TrucB",
+      "material": "Thep_Cot_Xam_Ghi",
+      "layer": "BSQ-GIA-CONG-COT-THEP"
+    },
+    {
+      "parent": "He_Khung_Mai_Ton_Xuong_Gia_Cong_NT_B1_12x8m > Khung_Truc_3_X23000",
+      "name": "Mong_BT_TrucA",
+      "material": "Be_Tong_Nen_BT100",
+      "layer": "BSQ-GIA-CONG-COT-THEP"
+    },
+    {
+      "parent": "He_Khung_Mai_Ton_Xuong_Gia_Cong_NT_B1_12x8m > Khung_Truc_3_X23000",
+      "name": "Ban_Ma_TrucA",
+      "material": "Sat_Thep_Den_Mo",
+      "layer": "BSQ-GIA-CONG-COT-THEP"
+    },
+    {
+      "parent": "He_Khung_Mai_Ton_Xuong_Gia_Cong_NT_B1_12x8m > Khung_Truc_3_X23000",
+      "name": "Cot_Thep_TrucA",
+      "material": "Thep_Cot_Xam_Ghi",
+      "layer": "BSQ-GIA-CONG-COT-THEP"
+    },
+    {
+      "parent": "He_Khung_Mai_Ton_Xuong_Gia_Cong_NT_B1_12x8m > Khung_Truc_3_X23000",
+      "name": "He_Keo_Mai_Khung_Hop_60x120_X23000",
+      "material": "Thep_Cot_Xam_Ghi",
+      "layer": "BSQ-GIA-CONG-KHUNG-VI-KEO"
+    },
+    {
+      "parent": "He_Khung_Mai_Ton_Xuong_Gia_Cong_NT_B1_12x8m > Khung_Truc_4_X27000",
+      "name": "Mong_BT_TrucB",
+      "material": "Be_Tong_Nen_BT100",
+      "layer": "BSQ-GIA-CONG-COT-THEP"
+    },
+    {
+      "parent": "He_Khung_Mai_Ton_Xuong_Gia_Cong_NT_B1_12x8m > Khung_Truc_4_X27000",
+      "name": "Ban_Ma_TrucB",
+      "material": "Sat_Thep_Den_Mo",
+      "layer": "BSQ-GIA-CONG-COT-THEP"
+    },
+    {
+      "parent": "He_Khung_Mai_Ton_Xuong_Gia_Cong_NT_B1_12x8m > Khung_Truc_4_X27000",
+      "name": "Cot_Thep_TrucB",
+      "material": "Thep_Cot_Xam_Ghi",
+      "layer": "BSQ-GIA-CONG-COT-THEP"
+    },
+    {
+      "parent": "He_Khung_Mai_Ton_Xuong_Gia_Cong_NT_B1_12x8m > Khung_Truc_4_X27000",
+      "name": "Mong_BT_TrucA",
+      "material": "Be_Tong_Nen_BT100",
+      "layer": "BSQ-GIA-CONG-COT-THEP"
+    },
+    {
+      "parent": "He_Khung_Mai_Ton_Xuong_Gia_Cong_NT_B1_12x8m > Khung_Truc_4_X27000",
+      "name": "Ban_Ma_TrucA",
+      "material": "Sat_Thep_Den_Mo",
+      "layer": "BSQ-GIA-CONG-COT-THEP"
+    },
+    {
+      "parent": "He_Khung_Mai_Ton_Xuong_Gia_Cong_NT_B1_12x8m > Khung_Truc_4_X27000",
+      "name": "Cot_Thep_TrucA",
+      "material": "Thep_Cot_Xam_Ghi",
+      "layer": "BSQ-GIA-CONG-COT-THEP"
+    },
+    {
+      "parent": "He_Khung_Mai_Ton_Xuong_Gia_Cong_NT_B1_12x8m > Khung_Truc_4_X27000",
+      "name": "He_Keo_Mai_Khung_Hop_60x120_X27000",
+      "material": "Thep_Cot_Xam_Ghi",
+      "layer": "BSQ-GIA-CONG-KHUNG-VI-KEO"
+    },
+    {
+      "parent": "He_Khung_Mai_Ton_Xuong_Gia_Cong_NT_B1_12x8m > Khung_Truc_4_X27000",
+      "name": "Tru_Bollard_Phi114_X27000",
+      "material": "nil",
+      "layer": "BSQ-GIA-CONG-COT-THEP"
+    },
+    {
+      "parent": "He_Khung_Mai_Ton_Xuong_Gia_Cong_NT_B1_12x8m",
+      "name": "He_Dam_Giang_Doc_ST1",
+      "material": "nil",
+      "layer": "BSQ-GIA-CONG-COT-THEP"
+    },
+    {
+      "parent": "He_Khung_Mai_Ton_Xuong_Gia_Cong_NT_B1_12x8m",
+      "name": "He_Xa_Go_Mai_C100x50x15x1.2",
+      "material": "nil",
+      "layer": "BSQ-GIA-CONG-XA-GO-MAI"
+    },
+    {
+      "parent": "He_Khung_Mai_Ton_Xuong_Gia_Cong_NT_B1_12x8m",
+      "name": "He_Ton_Mai_Xanh_Navy",
+      "material": "nil",
+      "layer": "BSQ-GIA-CONG-MAI-TON"
+    },
+    {
+      "parent": "He_Khung_Mai_Ton_Xuong_Gia_Cong_NT_B1_12x8m",
+      "name": "Vach_Ton_Thung_Sau_Lung_TrucA_NT_B1",
+      "material": "nil",
+      "layer": "BSQ-GIA-CONG-VACH-TON"
+    },
+    {
+      "parent": "He_Khung_Mai_Ton_Xuong_Gia_Cong_NT_B1_12x8m",
+      "name": "He_Giang_Vach_50x50",
+      "material": "nil",
+      "layer": "BSQ-GIA-CONG-GIANG-VACH"
+    },
+    {
+      "parent": "He_Khung_Mai_Ton_Xuong_Gia_Cong_NT_B2_12x8m > Khung_Truc_1_X43000",
+      "name": "Mong_BT_TrucB",
+      "material": "Be_Tong_Nen_BT100",
+      "layer": "BSQ-GIA-CONG-COT-THEP"
+    },
+    {
+      "parent": "He_Khung_Mai_Ton_Xuong_Gia_Cong_NT_B2_12x8m > Khung_Truc_1_X43000",
+      "name": "Ban_Ma_TrucB",
+      "material": "Sat_Thep_Den_Mo",
+      "layer": "BSQ-GIA-CONG-COT-THEP"
+    },
+    {
+      "parent": "He_Khung_Mai_Ton_Xuong_Gia_Cong_NT_B2_12x8m > Khung_Truc_1_X43000",
+      "name": "Cot_Thep_TrucB",
+      "material": "Thep_Cot_Xam_Ghi",
+      "layer": "BSQ-GIA-CONG-COT-THEP"
+    },
+    {
+      "parent": "He_Khung_Mai_Ton_Xuong_Gia_Cong_NT_B2_12x8m > Khung_Truc_1_X43000",
+      "name": "Mong_BT_TrucA",
+      "material": "Be_Tong_Nen_BT100",
+      "layer": "BSQ-GIA-CONG-COT-THEP"
+    },
+    {
+      "parent": "He_Khung_Mai_Ton_Xuong_Gia_Cong_NT_B2_12x8m > Khung_Truc_1_X43000",
+      "name": "Ban_Ma_TrucA",
+      "material": "Sat_Thep_Den_Mo",
+      "layer": "BSQ-GIA-CONG-COT-THEP"
+    },
+    {
+      "parent": "He_Khung_Mai_Ton_Xuong_Gia_Cong_NT_B2_12x8m > Khung_Truc_1_X43000",
+      "name": "Cot_Thep_TrucA",
+      "material": "Thep_Cot_Xam_Ghi",
+      "layer": "BSQ-GIA-CONG-COT-THEP"
+    },
+    {
+      "parent": "He_Khung_Mai_Ton_Xuong_Gia_Cong_NT_B2_12x8m > Khung_Truc_1_X43000",
+      "name": "He_Keo_Mai_Khung_Hop_60x120_X43000",
+      "material": "Thep_Cot_Xam_Ghi",
+      "layer": "BSQ-GIA-CONG-KHUNG-VI-KEO"
+    },
+    {
+      "parent": "He_Khung_Mai_Ton_Xuong_Gia_Cong_NT_B2_12x8m > Khung_Truc_2_X47000",
+      "name": "Mong_BT_TrucB",
+      "material": "Be_Tong_Nen_BT100",
+      "layer": "BSQ-GIA-CONG-COT-THEP"
+    },
+    {
+      "parent": "He_Khung_Mai_Ton_Xuong_Gia_Cong_NT_B2_12x8m > Khung_Truc_2_X47000",
+      "name": "Ban_Ma_TrucB",
+      "material": "Sat_Thep_Den_Mo",
+      "layer": "BSQ-GIA-CONG-COT-THEP"
+    },
+    {
+      "parent": "He_Khung_Mai_Ton_Xuong_Gia_Cong_NT_B2_12x8m > Khung_Truc_2_X47000",
+      "name": "Cot_Thep_TrucB",
+      "material": "Thep_Cot_Xam_Ghi",
+      "layer": "BSQ-GIA-CONG-COT-THEP"
+    },
+    {
+      "parent": "He_Khung_Mai_Ton_Xuong_Gia_Cong_NT_B2_12x8m > Khung_Truc_2_X47000",
+      "name": "Mong_BT_TrucA",
+      "material": "Be_Tong_Nen_BT100",
+      "layer": "BSQ-GIA-CONG-COT-THEP"
+    },
+    {
+      "parent": "He_Khung_Mai_Ton_Xuong_Gia_Cong_NT_B2_12x8m > Khung_Truc_2_X47000",
+      "name": "Ban_Ma_TrucA",
+      "material": "Sat_Thep_Den_Mo",
+      "layer": "BSQ-GIA-CONG-COT-THEP"
+    },
+    {
+      "parent": "He_Khung_Mai_Ton_Xuong_Gia_Cong_NT_B2_12x8m > Khung_Truc_2_X47000",
+      "name": "Cot_Thep_TrucA",
+      "material": "Thep_Cot_Xam_Ghi",
+      "layer": "BSQ-GIA-CONG-COT-THEP"
+    },
+    {
+      "parent": "He_Khung_Mai_Ton_Xuong_Gia_Cong_NT_B2_12x8m > Khung_Truc_2_X47000",
+      "name": "He_Keo_Mai_Khung_Hop_60x120_X47000",
+      "material": "Thep_Cot_Xam_Ghi",
+      "layer": "BSQ-GIA-CONG-KHUNG-VI-KEO"
+    },
+    {
+      "parent": "He_Khung_Mai_Ton_Xuong_Gia_Cong_NT_B2_12x8m > Khung_Truc_4_X55000",
+      "name": "Mong_BT_TrucB",
+      "material": "Be_Tong_Nen_BT100",
+      "layer": "BSQ-GIA-CONG-COT-THEP"
+    },
+    {
+      "parent": "He_Khung_Mai_Ton_Xuong_Gia_Cong_NT_B2_12x8m > Khung_Truc_4_X55000",
+      "name": "Ban_Ma_TrucB",
+      "material": "Sat_Thep_Den_Mo",
+      "layer": "BSQ-GIA-CONG-COT-THEP"
+    },
+    {
+      "parent": "He_Khung_Mai_Ton_Xuong_Gia_Cong_NT_B2_12x8m > Khung_Truc_4_X55000",
+      "name": "Cot_Thep_TrucB",
+      "material": "Thep_Cot_Xam_Ghi",
+      "layer": "BSQ-GIA-CONG-COT-THEP"
+    },
+    {
+      "parent": "He_Khung_Mai_Ton_Xuong_Gia_Cong_NT_B2_12x8m > Khung_Truc_4_X55000",
+      "name": "Mong_BT_TrucA",
+      "material": "Be_Tong_Nen_BT100",
+      "layer": "BSQ-GIA-CONG-COT-THEP"
+    },
+    {
+      "parent": "He_Khung_Mai_Ton_Xuong_Gia_Cong_NT_B2_12x8m > Khung_Truc_4_X55000",
+      "name": "Ban_Ma_TrucA",
+      "material": "Sat_Thep_Den_Mo",
+      "layer": "BSQ-GIA-CONG-COT-THEP"
+    },
+    {
+      "parent": "He_Khung_Mai_Ton_Xuong_Gia_Cong_NT_B2_12x8m > Khung_Truc_4_X55000",
+      "name": "Cot_Thep_TrucA",
+      "material": "Thep_Cot_Xam_Ghi",
+      "layer": "BSQ-GIA-CONG-COT-THEP"
+    },
+    {
+      "parent": "He_Khung_Mai_Ton_Xuong_Gia_Cong_NT_B2_12x8m > Khung_Truc_4_X55000",
+      "name": "He_Keo_Mai_Khung_Hop_60x120_X55000",
+      "material": "Thep_Cot_Xam_Ghi",
+      "layer": "BSQ-GIA-CONG-KHUNG-VI-KEO"
+    },
+    {
+      "parent": "He_Khung_Mai_Ton_Xuong_Gia_Cong_NT_B2_12x8m > Khung_Truc_4_X55000",
+      "name": "Tru_Bollard_Phi114_X55000",
+      "material": "nil",
+      "layer": "BSQ-GIA-CONG-COT-THEP"
+    },
+    {
+      "parent": "He_Khung_Mai_Ton_Xuong_Gia_Cong_NT_B2_12x8m",
+      "name": "He_Dam_Giang_Doc_ST1",
+      "material": "nil",
+      "layer": "BSQ-GIA-CONG-COT-THEP"
+    },
+    {
+      "parent": "He_Khung_Mai_Ton_Xuong_Gia_Cong_NT_B2_12x8m",
+      "name": "He_Xa_Go_Mai_C100x50x15x1.2",
+      "material": "nil",
+      "layer": "BSQ-GIA-CONG-XA-GO-MAI"
+    },
+    {
+      "parent": "He_Khung_Mai_Ton_Xuong_Gia_Cong_NT_B2_12x8m",
+      "name": "He_Ton_Mai_Xanh_Navy",
+      "material": "nil",
+      "layer": "BSQ-GIA-CONG-MAI-TON"
+    },
+    {
+      "parent": "He_Khung_Mai_Ton_Xuong_Gia_Cong_NT_B2_12x8m",
+      "name": "Vach_Ton_Thung_Sau_Lung_TrucA_NT_B2",
+      "material": "nil",
+      "layer": "BSQ-GIA-CONG-VACH-TON"
+    },
+    {
+      "parent": "He_Khung_Mai_Ton_Xuong_Gia_Cong_NT_B2_12x8m > Khung_Truc_3_X51000",
+      "name": "Mong_BT_TrucB",
+      "material": "Be_Tong_Nen_BT100",
+      "layer": "BSQ-GIA-CONG-COT-THEP"
+    },
+    {
+      "parent": "He_Khung_Mai_Ton_Xuong_Gia_Cong_NT_B2_12x8m > Khung_Truc_3_X51000",
+      "name": "Ban_Ma_TrucB",
+      "material": "Sat_Thep_Den_Mo",
+      "layer": "BSQ-GIA-CONG-COT-THEP"
+    },
+    {
+      "parent": "He_Khung_Mai_Ton_Xuong_Gia_Cong_NT_B2_12x8m > Khung_Truc_3_X51000",
+      "name": "Cot_Thep_TrucB",
+      "material": "Thep_Cot_Xam_Ghi",
+      "layer": "BSQ-GIA-CONG-COT-THEP"
+    },
+    {
+      "parent": "He_Khung_Mai_Ton_Xuong_Gia_Cong_NT_B2_12x8m > Khung_Truc_3_X51000",
+      "name": "Mong_BT_TrucA",
+      "material": "Be_Tong_Nen_BT100",
+      "layer": "BSQ-GIA-CONG-COT-THEP"
+    },
+    {
+      "parent": "He_Khung_Mai_Ton_Xuong_Gia_Cong_NT_B2_12x8m > Khung_Truc_3_X51000",
+      "name": "Ban_Ma_TrucA",
+      "material": "Sat_Thep_Den_Mo",
+      "layer": "BSQ-GIA-CONG-COT-THEP"
+    },
+    {
+      "parent": "He_Khung_Mai_Ton_Xuong_Gia_Cong_NT_B2_12x8m > Khung_Truc_3_X51000",
+      "name": "Cot_Thep_TrucA",
+      "material": "Thep_Cot_Xam_Ghi",
+      "layer": "BSQ-GIA-CONG-COT-THEP"
+    },
+    {
+      "parent": "He_Khung_Mai_Ton_Xuong_Gia_Cong_NT_B2_12x8m > Khung_Truc_3_X51000",
+      "name": "He_Keo_Mai_Khung_Hop_60x120_X51000",
+      "material": "Thep_Cot_Xam_Ghi",
+      "layer": "BSQ-GIA-CONG-KHUNG-VI-KEO"
+    },
+    {
+      "parent": "He_Khung_Mai_Ton_Xuong_Gia_Cong_NT_B2_12x8m",
+      "name": "He_Giang_Vach_50x50",
+      "material": "nil",
+      "layer": "BSQ-GIA-CONG-GIANG-VACH"
+    }
+  ],
+  "gc_materials": [
+    "Be_Tong_Nen_BT100",
+    "Sat_Thep_Den_Mo",
+    "Thep_Cot_Xam_Ghi",
+    "nil"
+  ],
+  "cong_items": [
+    {
+      "name": "He_Thong_Hang_Rao_Ton_Khu_Dat",
+      "material": "nil"
+    },
+    {
+      "name": "He_Thong_Cong_Chinh_6m_3_Vi_Tri",
+      "material": "nil"
+    }
+  ]
+}

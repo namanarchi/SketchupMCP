@@ -1,0 +1,403 @@
+{
+  "target_name": "He_Khung_Mai_Ton_Khu_Gia_Cong_Co_Khi_36x8m",
+  "target_bounds": [
+    [
+      14750,
+      -153.4,
+      -400
+    ],
+    [
+      55250,
+      8153.4,
+      4227
+    ]
+  ],
+  "children": [
+    {
+      "name": "He_Khung_Mai_Ton_Xuong_Gia_Cong_NT_B1_12x8m",
+      "bounds": [
+        [
+          14750,
+          -153.4,
+          -400
+        ],
+        [
+          27250,
+          8153.4,
+          4227
+        ]
+      ],
+      "subgroups": [
+        {
+          "name": "Khung_Truc_1_X15000",
+          "layer": "Layer0",
+          "bounds": [
+            [
+              14800,
+              90,
+              -400
+            ],
+            [
+              15200,
+              7990,
+              4150
+            ]
+          ],
+          "dim": [
+            400,
+            7900,
+            4550
+          ],
+          "sub_count": 7
+        },
+        {
+          "name": "Khung_Truc_2_X19000",
+          "layer": "Layer0",
+          "bounds": [
+            [
+              18800,
+              90,
+              -400
+            ],
+            [
+              19200,
+              7990,
+              4150
+            ]
+          ],
+          "dim": [
+            400,
+            7900,
+            4550
+          ],
+          "sub_count": 7
+        },
+        {
+          "name": "Khung_Truc_3_X23000",
+          "layer": "Layer0",
+          "bounds": [
+            [
+              22800,
+              90,
+              -400
+            ],
+            [
+              23200,
+              7990,
+              4150
+            ]
+          ],
+          "dim": [
+            400,
+            7900,
+            4550
+          ],
+          "sub_count": 7
+        },
+        {
+          "name": "Khung_Truc_4_X27000",
+          "layer": "Layer0",
+          "bounds": [
+            [
+              26800,
+              -40,
+              -400
+            ],
+            [
+              27200,
+              7990,
+              4150
+            ]
+          ],
+          "dim": [
+            400,
+            8030,
+            4550
+          ],
+          "sub_count": 8
+        },
+        {
+          "name": "He_Dam_Giang_Doc_ST1",
+          "layer": "BSQ-CHUNG-COT-THEP",
+          "bounds": [
+            [
+              15000,
+              150,
+              3500
+            ],
+            [
+              27000,
+              7850,
+              4090
+            ]
+          ],
+          "dim": [
+            12000,
+            7700,
+            590
+          ],
+          "sub_count": 3
+        },
+        {
+          "name": "He_Xa_Go_Mai_30x70",
+          "layer": "BSQ-CHUNG-XA-GO-MAI",
+          "bounds": [
+            [
+              14850,
+              200,
+              3621.9
+            ],
+            [
+              27150,
+              7800,
+              4096.6
+            ]
+          ],
+          "dim": [
+            12300,
+            7600,
+            474.7
+          ],
+          "sub_count": 10
+        },
+        {
+          "name": "He_Ton_Mai_Xanh_Navy",
+          "layer": "BSQ-CHUNG-MAI-TON",
+          "bounds": [
+            [
+              14750,
+              -153.4,
+              3605.9
+            ],
+            [
+              27250,
+              8153.4,
+              4227
+            ]
+          ],
+          "dim": [
+            12500,
+            8306.8,
+            621.1
+          ],
+          "sub_count": 3
+        },
+        {
+          "name": "Vach_Ton_Thung_Sau_Lung_TrucA_NT_B1",
+          "layer": "BSQ-CHUNG-VACH-CONTAINER",
+          "bounds": [
+            [
+              15000,
+              7850,
+              100
+            ],
+            [
+              27000,
+              7870,
+              3600
+            ]
+          ],
+          "dim": [
+            12000,
+            20,
+            3500
+          ],
+          "sub_count": 1
+        }
+      ]
+    },
+    {
+      "name": "He_Khung_Mai_Ton_Xuong_Gia_Cong_NT_B2_12x8m",
+      "bounds": [
+        [
+          42750,
+          -153.4,
+          -400
+        ],
+        [
+          55250,
+          8153.4,
+          4227
+        ]
+      ],
+      "subgroups": [
+        {
+          "name": "Khung_Truc_1_X43000",
+          "layer": "Layer0",
+          "bounds": [
+            [
+              42800,
+              90,
+              -400
+            ],
+            [
+              43200,
+              7990,
+              4150
+            ]
+          ],
+          "dim": [
+            400,
+            7900,
+            4550
+          ],
+          "sub_count": 7
+        },
+        {
+          "name": "Khung_Truc_2_X47000",
+          "layer": "Layer0",
+          "bounds": [
+            [
+              46800,
+              90,
+              -400
+            ],
+            [
+              47200,
+              7990,
+              4150
+            ]
+          ],
+          "dim": [
+            400,
+            7900,
+            4550
+          ],
+          "sub_count": 7
+        },
+        {
+          "name": "Khung_Truc_4_X55000",
+          "layer": "Layer0",
+          "bounds": [
+            [
+              54800,
+              -40,
+              -400
+            ],
+            [
+              55200,
+              7990,
+              4150
+            ]
+          ],
+          "dim": [
+            400,
+            8030,
+            4550
+          ],
+          "sub_count": 8
+        },
+        {
+          "name": "He_Dam_Giang_Doc_ST1",
+          "layer": "BSQ-CHUNG-COT-THEP",
+          "bounds": [
+            [
+              43000,
+              150,
+              3500
+            ],
+            [
+              55000,
+              7850,
+              4090
+            ]
+          ],
+          "dim": [
+            12000,
+            7700,
+            590
+          ],
+          "sub_count": 3
+        },
+        {
+          "name": "He_Xa_Go_Mai_30x70",
+          "layer": "BSQ-CHUNG-XA-GO-MAI",
+          "bounds": [
+            [
+              42850,
+              200,
+              3621.9
+            ],
+            [
+              55150,
+              7800,
+              4096.6
+            ]
+          ],
+          "dim": [
+            12300,
+            7600,
+            474.7
+          ],
+          "sub_count": 10
+        },
+        {
+          "name": "He_Ton_Mai_Xanh_Navy",
+          "layer": "BSQ-CHUNG-MAI-TON",
+          "bounds": [
+            [
+              42750,
+              -153.4,
+              3605.9
+            ],
+            [
+              55250,
+              8153.4,
+              4227
+            ]
+          ],
+          "dim": [
+            12500,
+            8306.8,
+            621.1
+          ],
+          "sub_count": 3
+        },
+        {
+          "name": "Vach_Ton_Thung_Sau_Lung_TrucA_NT_B2",
+          "layer": "BSQ-CHUNG-VACH-CONTAINER",
+          "bounds": [
+            [
+              43000,
+              7850,
+              100
+            ],
+            [
+              55000,
+              7870,
+              3600
+            ]
+          ],
+          "dim": [
+            12000,
+            20,
+            3500
+          ],
+          "sub_count": 1
+        },
+        {
+          "name": "Khung_Truc_3_X51000",
+          "layer": "Layer0",
+          "bounds": [
+            [
+              50800,
+              90,
+              -400
+            ],
+            [
+              51200,
+              7990,
+              4150
+            ]
+          ],
+          "dim": [
+            400,
+            7900,
+            4550
+          ],
+          "sub_count": 7
+        }
+      ]
+    }
+  ]
+}

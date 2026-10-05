@@ -1,0 +1,250 @@
+{
+  "layers": [
+    {
+      "name": "Layer0",
+      "visible": true
+    },
+    {
+      "name": "BSQ-KTX-TONG-THE",
+      "visible": true
+    },
+    {
+      "name": "BSQ-CANTIN-TONG-THE",
+      "visible": true
+    },
+    {
+      "name": "BSQ-NVS-TONG-THE",
+      "visible": true
+    },
+    {
+      "name": "BSQ-KHO-BAI-TONG-THE",
+      "visible": true
+    },
+    {
+      "name": "BSQ-CHUNG-KHUNG-CONTAINER",
+      "visible": true
+    },
+    {
+      "name": "BSQ-CHUNG-VACH-CONTAINER",
+      "visible": true
+    },
+    {
+      "name": "BSQ-CHUNG-CUA-DI-CUA-SO",
+      "visible": true
+    },
+    {
+      "name": "BSQ-CHUNG-SAN-CONTAINER",
+      "visible": true
+    },
+    {
+      "name": "BSQ-CHUNG-TRAN-CONTAINER",
+      "visible": true
+    },
+    {
+      "name": "BSQ-CONG-RAO-BOT-BAO-VE",
+      "visible": true
+    },
+    {
+      "name": "BSQ-CHUNG-MAI-TON",
+      "visible": true
+    },
+    {
+      "name": "BSQ-CHUNG-XA-GO-MAI",
+      "visible": true
+    },
+    {
+      "name": "BSQ-CHUNG-KHUNG-VI-KEO",
+      "visible": true
+    },
+    {
+      "name": "BSQ-CHUNG-COT-THEP",
+      "visible": true
+    },
+    {
+      "name": "BSQ-KTX-CAU-THANG-LAN-CAN",
+      "visible": true
+    },
+    {
+      "name": "BSQ-CONG-RAO-CONG-CHINH",
+      "visible": true
+    },
+    {
+      "name": "BSQ-CONG-RAO-HANG-RAO",
+      "visible": true
+    },
+    {
+      "name": "BSQ-CANTIN-BAN-GHE-AN",
+      "visible": true
+    },
+    {
+      "name": "BSQ-CANTIN-BEP-NAU",
+      "visible": true
+    },
+    {
+      "name": "BSQ-CANTIN-KHO-THUC-PHAM",
+      "visible": true
+    },
+    {
+      "name": "BSQ-VP-KHO-NOI-THAT",
+      "visible": true
+    },
+    {
+      "name": "BSQ-NVS-THIET-BI-SU",
+      "visible": true
+    },
+    {
+      "name": "BSQ-NVS-SEN-TAM",
+      "visible": true
+    },
+    {
+      "name": "BSQ-NVS-VACH-COMPACT",
+      "visible": true
+    },
+    {
+      "name": "BSQ-NVS-THOAT-NUOC",
+      "visible": true
+    },
+    {
+      "name": "BSQ-NVS-BE-TU-HOAI",
+      "visible": true
+    },
+    {
+      "name": "BSQ-KHO-BAI-MAY-MOC-THEP",
+      "visible": true
+    },
+    {
+      "name": "BSQ-KHO-BAI-THEP-NGUYEN-LIEU",
+      "visible": true
+    },
+    {
+      "name": "BSQ-KHO-BAI-THEP-THANH-PHAM",
+      "visible": true
+    },
+    {
+      "name": "BSQ-KHO-BAI-PHE-LIEU-COPPHA",
+      "visible": true
+    },
+    {
+      "name": "BSQ-HT-NEN-DAT",
+      "visible": true
+    },
+    {
+      "name": "BSQ-HT-NEN-BE-TONG",
+      "visible": true
+    },
+    {
+      "name": "BSQ-AT-BARIE-CANH-BAO",
+      "visible": true
+    },
+    {
+      "name": "BSQ-AT-VACH-SON-LAN",
+      "visible": true
+    },
+    {
+      "name": "BSQ-AT-BIEN-BAO-PANO",
+      "visible": true
+    },
+    {
+      "name": "BSQ-2D-CAD-DINH-VI",
+      "visible": true
+    },
+    {
+      "name": "BSQ-2D-MAT-CAT-SECTION",
+      "visible": true
+    },
+    {
+      "name": "BSQ-KTX-CONTAINER-TANG-1",
+      "visible": true
+    },
+    {
+      "name": "BSQ-KTX-CONTAINER-TANG-2",
+      "visible": true
+    },
+    {
+      "name": "BSQ-KTX-GIUONG-TANG",
+      "visible": true
+    },
+    {
+      "name": "BSQ-VP-KHO-TONG-THE",
+      "visible": true
+    },
+    {
+      "name": "BSQ-VP-KHO-VO-CONTAINER",
+      "visible": true
+    },
+    {
+      "name": "BSQ-VP-KHO-CUA",
+      "visible": true
+    },
+    {
+      "name": "BSQ-KHO-BAI-XA-GO-MAI",
+      "visible": false
+    },
+    {
+      "name": "BSQ-KHO-BAI-KHUNG-VI-KEO",
+      "visible": true
+    },
+    {
+      "name": "BSQ-KHO-BAI-COT-THEP",
+      "visible": true
+    },
+    {
+      "name": "BSQ-KHO-BAI-GIANG-VACH",
+      "visible": true
+    },
+    {
+      "name": "BSQ-KHO-BAI-MAI-TON",
+      "visible": true
+    },
+    {
+      "name": "BSQ-KHO-BAI-VACH-TON",
+      "visible": true
+    },
+    {
+      "name": "BSQ-KHO-BAI-SAN-BE-TONG",
+      "visible": true
+    },
+    {
+      "name": "BSQ-KHO-BAI-MONG-COC",
+      "visible": true
+    },
+    {
+      "name": "BSQ-KHO-BAI-THIET-BI-MAY-MOC",
+      "visible": false
+    }
+  ],
+  "scenes": [
+    "Scene 1",
+    "3D KHO VAT TU",
+    "KHU GIA CONG",
+    "3D TOAN BO  DU AN",
+    "3D KY TUC XA",
+    "3D GIA CONG",
+    "NONE",
+    "MBKTX-KVT-BGC",
+    "MBDVI",
+    "KHOBAI-MB",
+    "GIACONG-MDUNG",
+    "KHUVT-MDUNG",
+    "KHOKIN-MD",
+    "CTIN-MDUNG",
+    "CTIN-3D",
+    "CTIN-MBEN1",
+    "CTIN-MB",
+    "KTX-MATDUNG",
+    "KTX-3D",
+    "KTX-MATBEN",
+    "KTX-MBEN2",
+    "KTX-MATSAU",
+    "KTX-MBT1",
+    "KTX-MBT2",
+    "NVS-MB",
+    "NVS-MBEN",
+    "NVS-3D",
+    "NVS-MTRUOC",
+    "BTH-MCAT",
+    "BTH-3D",
+    "BTH-MB",
+    "NVS-MSAU"
+  ]
+}

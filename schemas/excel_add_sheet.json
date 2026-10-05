@@ -1,0 +1,69 @@
+{
+  "name": "excel_add_sheet",
+  "description": "Thêm một Sheet mới hoặc ghi đè dữ liệu vào Sheet trong file Excel (.xlsx) hiện hữu.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "file_path": {
+        "type": "string",
+        "description": "Đường dẫn file .xlsx cần sửa đổi"
+      },
+      "sheet_name": {
+        "type": "string",
+        "description": "Tên Sheet cần thêm/sửa"
+      },
+      "sheet_title": {
+        "type": "string",
+        "description": "Tiêu đề in trên đầu Sheet"
+      },
+      "columns": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "header": {
+              "type": "string"
+            },
+            "key": {
+              "type": "string"
+            },
+            "width": {
+              "type": "number"
+            },
+            "align": {
+              "type": "string",
+              "enum": [
+                "left",
+                "center",
+                "right"
+              ]
+            },
+            "format": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "header",
+            "key"
+          ]
+        }
+      },
+      "rows": {
+        "type": "array",
+        "items": {
+          "type": "object"
+        }
+      },
+      "summary_row": {
+        "type": "boolean",
+        "default": true
+      }
+    },
+    "required": [
+      "file_path",
+      "sheet_name",
+      "columns",
+      "rows"
+    ]
+  }
+}

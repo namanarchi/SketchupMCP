@@ -1,0 +1,682 @@
+{
+  "audit": [
+    {
+      "name": "He_Khung_Mai_Ton_Xuong_Gia_Cong_NT_B1_12x8m",
+      "bounds": [
+        [
+          14750,
+          -153.4,
+          -400
+        ],
+        [
+          27250,
+          8153.4,
+          4284
+        ]
+      ],
+      "subgroups": [
+        {
+          "name": "Khung_Truc_1_X15000",
+          "layer": "Layer0",
+          "min": [
+            14800,
+            90,
+            -400
+          ],
+          "max": [
+            15200,
+            7990,
+            4150
+          ],
+          "dim": [
+            400,
+            7900,
+            4550
+          ],
+          "child_count": 7,
+          "manifold": false
+        },
+        {
+          "name": "Khung_Truc_2_X19000",
+          "layer": "Layer0",
+          "min": [
+            18800,
+            90,
+            -400
+          ],
+          "max": [
+            19200,
+            7990,
+            4150
+          ],
+          "dim": [
+            400,
+            7900,
+            4550
+          ],
+          "child_count": 7,
+          "manifold": false
+        },
+        {
+          "name": "Khung_Truc_3_X23000",
+          "layer": "Layer0",
+          "min": [
+            22800,
+            90,
+            -400
+          ],
+          "max": [
+            23200,
+            7990,
+            4150
+          ],
+          "dim": [
+            400,
+            7900,
+            4550
+          ],
+          "child_count": 7,
+          "manifold": false
+        },
+        {
+          "name": "Khung_Truc_4_X27000",
+          "layer": "Layer0",
+          "min": [
+            26800,
+            -40,
+            -400
+          ],
+          "max": [
+            27200,
+            7990,
+            4150
+          ],
+          "dim": [
+            400,
+            8030,
+            4550
+          ],
+          "child_count": 8,
+          "manifold": false
+        },
+        {
+          "name": "He_Dam_Giang_Doc_ST1",
+          "layer": "BSQ-GIA-CONG-COT-THEP",
+          "min": [
+            15030,
+            150,
+            3515
+          ],
+          "max": [
+            26970,
+            7850,
+            4150
+          ],
+          "dim": [
+            11940,
+            7700,
+            635
+          ],
+          "child_count": 9,
+          "manifold": false,
+          "beams": [
+            {
+              "name": "Dam_Doc_ST1_Eave_Nam_Nhip_1_X15030_X18970",
+              "layer": "BSQ-GIA-CONG-COT-THEP",
+              "dim": [
+                3940,
+                50,
+                100
+              ]
+            },
+            {
+              "name": "Dam_Doc_ST1_Eave_Bac_Nhip_1_X15030_X18970",
+              "layer": "BSQ-GIA-CONG-COT-THEP",
+              "dim": [
+                3940,
+                50,
+                100
+              ]
+            },
+            {
+              "name": "Dam_Doc_ST1_Dinh_Noc_Nhip_1_X15030_X18970",
+              "layer": "BSQ-GIA-CONG-COT-THEP",
+              "dim": [
+                3940,
+                60,
+                120
+              ]
+            },
+            {
+              "name": "Dam_Doc_ST1_Eave_Nam_Nhip_2_X19030_X22970",
+              "layer": "BSQ-GIA-CONG-COT-THEP",
+              "dim": [
+                3940,
+                50,
+                100
+              ]
+            },
+            {
+              "name": "Dam_Doc_ST1_Eave_Bac_Nhip_2_X19030_X22970",
+              "layer": "BSQ-GIA-CONG-COT-THEP",
+              "dim": [
+                3940,
+                50,
+                100
+              ]
+            },
+            {
+              "name": "Dam_Doc_ST1_Dinh_Noc_Nhip_2_X19030_X22970",
+              "layer": "BSQ-GIA-CONG-COT-THEP",
+              "dim": [
+                3940,
+                60,
+                120
+              ]
+            },
+            {
+              "name": "Dam_Doc_ST1_Eave_Nam_Nhip_3_X23030_X26970",
+              "layer": "BSQ-GIA-CONG-COT-THEP",
+              "dim": [
+                3940,
+                50,
+                100
+              ]
+            },
+            {
+              "name": "Dam_Doc_ST1_Eave_Bac_Nhip_3_X23030_X26970",
+              "layer": "BSQ-GIA-CONG-COT-THEP",
+              "dim": [
+                3940,
+                50,
+                100
+              ]
+            },
+            {
+              "name": "Dam_Doc_ST1_Dinh_Noc_Nhip_3_X23030_X26970",
+              "layer": "BSQ-GIA-CONG-COT-THEP",
+              "dim": [
+                3940,
+                60,
+                120
+              ]
+            }
+          ]
+        },
+        {
+          "name": "He_Xa_Go_Mai_C100x50x15x1.2",
+          "layer": "BSQ-GIA-CONG-XA-GO-MAI",
+          "min": [
+            14850,
+            186.2,
+            3621.9
+          ],
+          "max": [
+            27150,
+            7813.8,
+            4228.1
+          ],
+          "dim": [
+            12300,
+            7627.5,
+            606.2
+          ],
+          "child_count": 12,
+          "manifold": false,
+          "purlins_count": 12,
+          "sample_purlin": {
+            "name": "XaGo_C100_Nam_1",
+            "layer": "BSQ-GIA-CONG-XA-GO-MAI",
+            "dim": [
+              12300,
+              63.3,
+              105.9
+            ]
+          }
+        },
+        {
+          "name": "He_Ton_Mai_Xanh_Navy",
+          "layer": "BSQ-GIA-CONG-MAI-TON",
+          "min": [
+            14750,
+            -153.4,
+            3674.3
+          ],
+          "max": [
+            27250,
+            8153.4,
+            4284
+          ],
+          "dim": [
+            12500,
+            8306.9,
+            609.7
+          ],
+          "child_count": 3,
+          "manifold": false,
+          "roof_elements": [
+            {
+              "name": "Mai_Doc_Nam",
+              "layer": "BSQ-GIA-CONG-MAI-TON",
+              "dim": [
+                12400,
+                4153.4,
+                601.5
+              ]
+            },
+            {
+              "name": "Mai_Doc_Bac",
+              "layer": "BSQ-GIA-CONG-MAI-TON",
+              "dim": [
+                12400,
+                4153.4,
+                601.5
+              ]
+            },
+            {
+              "name": "Up_Noc_Dinh_Mai",
+              "layer": "BSQ-GIA-CONG-MAI-TON",
+              "dim": [
+                12500,
+                400,
+                29.8
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Vach_Ton_Thung_Sau_Lung_TrucA_NT_B1",
+          "layer": "BSQ-GIA-CONG-VACH-TON",
+          "min": [
+            15000,
+            7850,
+            100
+          ],
+          "max": [
+            27000,
+            7870,
+            3600
+          ],
+          "dim": [
+            12000,
+            20,
+            3500
+          ],
+          "child_count": 1,
+          "manifold": false
+        },
+        {
+          "name": "He_Giang_Vach_50x50",
+          "layer": "BSQ-GIA-CONG-GIANG-VACH",
+          "min": [
+            15030,
+            7800,
+            1000
+          ],
+          "max": [
+            26970,
+            7850,
+            2850
+          ],
+          "dim": [
+            11940,
+            50,
+            1850
+          ],
+          "child_count": 9,
+          "manifold": false,
+          "girts_count": 9,
+          "sample_girt": {
+            "name": "Giang_Vach_TrucA_Tang_1_Z1000_Nhip_1_X15030_X18970",
+            "layer": "BSQ-GIA-CONG-GIANG-VACH",
+            "dim": [
+              3940,
+              50,
+              50
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "He_Khung_Mai_Ton_Xuong_Gia_Cong_NT_B2_12x8m",
+      "bounds": [
+        [
+          42750,
+          -153.4,
+          -400
+        ],
+        [
+          55250,
+          8153.4,
+          4284
+        ]
+      ],
+      "subgroups": [
+        {
+          "name": "Khung_Truc_1_X43000",
+          "layer": "Layer0",
+          "min": [
+            42800,
+            90,
+            -400
+          ],
+          "max": [
+            43200,
+            7990,
+            4150
+          ],
+          "dim": [
+            400,
+            7900,
+            4550
+          ],
+          "child_count": 7,
+          "manifold": false
+        },
+        {
+          "name": "Khung_Truc_2_X47000",
+          "layer": "Layer0",
+          "min": [
+            46800,
+            90,
+            -400
+          ],
+          "max": [
+            47200,
+            7990,
+            4150
+          ],
+          "dim": [
+            400,
+            7900,
+            4550
+          ],
+          "child_count": 7,
+          "manifold": false
+        },
+        {
+          "name": "Khung_Truc_4_X55000",
+          "layer": "Layer0",
+          "min": [
+            54800,
+            -40,
+            -400
+          ],
+          "max": [
+            55200,
+            7990,
+            4150
+          ],
+          "dim": [
+            400,
+            8030,
+            4550
+          ],
+          "child_count": 8,
+          "manifold": false
+        },
+        {
+          "name": "He_Dam_Giang_Doc_ST1",
+          "layer": "BSQ-GIA-CONG-COT-THEP",
+          "min": [
+            43030,
+            150,
+            3515
+          ],
+          "max": [
+            54970,
+            7850,
+            4150
+          ],
+          "dim": [
+            11940,
+            7700,
+            635
+          ],
+          "child_count": 9,
+          "manifold": false,
+          "beams": [
+            {
+              "name": "Dam_Doc_ST1_Eave_Nam_Nhip_1_X43030_X46970",
+              "layer": "BSQ-GIA-CONG-COT-THEP",
+              "dim": [
+                3940,
+                50,
+                100
+              ]
+            },
+            {
+              "name": "Dam_Doc_ST1_Eave_Bac_Nhip_1_X43030_X46970",
+              "layer": "BSQ-GIA-CONG-COT-THEP",
+              "dim": [
+                3940,
+                50,
+                100
+              ]
+            },
+            {
+              "name": "Dam_Doc_ST1_Dinh_Noc_Nhip_1_X43030_X46970",
+              "layer": "BSQ-GIA-CONG-COT-THEP",
+              "dim": [
+                3940,
+                60,
+                120
+              ]
+            },
+            {
+              "name": "Dam_Doc_ST1_Eave_Nam_Nhip_2_X47030_X50970",
+              "layer": "BSQ-GIA-CONG-COT-THEP",
+              "dim": [
+                3940,
+                50,
+                100
+              ]
+            },
+            {
+              "name": "Dam_Doc_ST1_Eave_Bac_Nhip_2_X47030_X50970",
+              "layer": "BSQ-GIA-CONG-COT-THEP",
+              "dim": [
+                3940,
+                50,
+                100
+              ]
+            },
+            {
+              "name": "Dam_Doc_ST1_Dinh_Noc_Nhip_2_X47030_X50970",
+              "layer": "BSQ-GIA-CONG-COT-THEP",
+              "dim": [
+                3940,
+                60,
+                120
+              ]
+            },
+            {
+              "name": "Dam_Doc_ST1_Eave_Nam_Nhip_3_X51030_X54970",
+              "layer": "BSQ-GIA-CONG-COT-THEP",
+              "dim": [
+                3940,
+                50,
+                100
+              ]
+            },
+            {
+              "name": "Dam_Doc_ST1_Eave_Bac_Nhip_3_X51030_X54970",
+              "layer": "BSQ-GIA-CONG-COT-THEP",
+              "dim": [
+                3940,
+                50,
+                100
+              ]
+            },
+            {
+              "name": "Dam_Doc_ST1_Dinh_Noc_Nhip_3_X51030_X54970",
+              "layer": "BSQ-GIA-CONG-COT-THEP",
+              "dim": [
+                3940,
+                60,
+                120
+              ]
+            }
+          ]
+        },
+        {
+          "name": "He_Xa_Go_Mai_C100x50x15x1.2",
+          "layer": "BSQ-GIA-CONG-XA-GO-MAI",
+          "min": [
+            42850,
+            186.2,
+            3621.9
+          ],
+          "max": [
+            55150,
+            7813.8,
+            4228.1
+          ],
+          "dim": [
+            12300,
+            7627.5,
+            606.2
+          ],
+          "child_count": 12,
+          "manifold": false,
+          "purlins_count": 12,
+          "sample_purlin": {
+            "name": "XaGo_C100_Nam_1",
+            "layer": "BSQ-GIA-CONG-XA-GO-MAI",
+            "dim": [
+              12300,
+              63.3,
+              105.9
+            ]
+          }
+        },
+        {
+          "name": "He_Ton_Mai_Xanh_Navy",
+          "layer": "BSQ-GIA-CONG-MAI-TON",
+          "min": [
+            42750,
+            -153.4,
+            3674.3
+          ],
+          "max": [
+            55250,
+            8153.4,
+            4284
+          ],
+          "dim": [
+            12500,
+            8306.9,
+            609.7
+          ],
+          "child_count": 3,
+          "manifold": false,
+          "roof_elements": [
+            {
+              "name": "Mai_Doc_Nam",
+              "layer": "BSQ-GIA-CONG-MAI-TON",
+              "dim": [
+                12400,
+                4153.4,
+                601.5
+              ]
+            },
+            {
+              "name": "Mai_Doc_Bac",
+              "layer": "BSQ-GIA-CONG-MAI-TON",
+              "dim": [
+                12400,
+                4153.4,
+                601.5
+              ]
+            },
+            {
+              "name": "Up_Noc_Dinh_Mai",
+              "layer": "BSQ-GIA-CONG-MAI-TON",
+              "dim": [
+                12500,
+                400,
+                29.8
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Vach_Ton_Thung_Sau_Lung_TrucA_NT_B2",
+          "layer": "BSQ-GIA-CONG-VACH-TON",
+          "min": [
+            43000,
+            7850,
+            100
+          ],
+          "max": [
+            55000,
+            7870,
+            3600
+          ],
+          "dim": [
+            12000,
+            20,
+            3500
+          ],
+          "child_count": 1,
+          "manifold": false
+        },
+        {
+          "name": "Khung_Truc_3_X51000",
+          "layer": "Layer0",
+          "min": [
+            50800,
+            90,
+            -400
+          ],
+          "max": [
+            51200,
+            7990,
+            4150
+          ],
+          "dim": [
+            400,
+            7900,
+            4550
+          ],
+          "child_count": 7,
+          "manifold": false
+        },
+        {
+          "name": "He_Giang_Vach_50x50",
+          "layer": "BSQ-GIA-CONG-GIANG-VACH",
+          "min": [
+            43030,
+            7800,
+            1000
+          ],
+          "max": [
+            54970,
+            7850,
+            2850
+          ],
+          "dim": [
+            11940,
+            50,
+            1850
+          ],
+          "child_count": 9,
+          "manifold": false,
+          "girts_count": 9,
+          "sample_girt": {
+            "name": "Giang_Vach_TrucA_Tang_1_Z1000_Nhip_1_X43030_X46970",
+            "layer": "BSQ-GIA-CONG-GIANG-VACH",
+            "dim": [
+              3940,
+              50,
+              50
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "purlin_1_top_z": 3727.88,
+  "purlin_6_top_z": 4228.14
+}

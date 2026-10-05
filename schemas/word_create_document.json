@@ -1,0 +1,111 @@
+{
+  "name": "word_create_document",
+  "description": "Khởi tạo tài liệu thuyết minh dự toán, báo cáo kỹ thuật Word (.docx) chuyên nghiệp chuẩn TCVN có Header/Footer, số trang, tiêu đề, các mục phân cấp và các bảng biểu dữ liệu.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "file_path": {
+        "type": "string",
+        "description": "Đường dẫn lưu file .docx"
+      },
+      "document_title": {
+        "type": "string",
+        "description": "Tiêu đề chính của tài liệu (VD: THUYẾT MINH BÓC TÁCH KHỐI LƯỢNG VÀ BIỆN PHÁP THI CÔNG)"
+      },
+      "project_name": {
+        "type": "string",
+        "description": "Tên dự án công trình"
+      },
+      "subtitle": {
+        "type": "string",
+        "description": "Phụ đề hoặc thông tin gói thầu"
+      },
+      "author": {
+        "type": "string",
+        "default": "BAN CHỈ HUY CÔNG TRƯỜNG & BSQUARE",
+        "description": "Đơn vị lập"
+      },
+      "sections": {
+        "type": "array",
+        "description": "Danh sách các đề mục nội dung trong tài liệu",
+        "items": {
+          "type": "object",
+          "properties": {
+            "heading": {
+              "type": "string",
+              "description": "Tiêu đề mục (VD: 1. Tổng Quan Dự Án)"
+            },
+            "heading_level": {
+              "type": "number",
+              "enum": [
+                1,
+                2,
+                3
+              ],
+              "default": 1
+            },
+            "paragraphs": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Các đoạn văn bản thuyết minh"
+            },
+            "bullet_points": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Danh sách các gạch đầu dòng"
+            },
+            "table": {
+              "type": "object",
+              "description": "Bảng số liệu kèm theo mục này",
+              "properties": {
+                "headers": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "rows": {
+                  "type": "array",
+                  "items": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "widths": {
+                  "type": "array",
+                  "items": {
+                    "type": "number"
+                  },
+                  "description": "Tỷ lệ % độ rộng các cột (VD: [10, 30, 20, 20, 20])"
+                }
+              },
+              "required": [
+                "headers",
+                "rows"
+              ]
+            }
+          },
+          "required": [
+            "heading"
+          ]
+        }
+      },
+      "open_after_create": {
+        "type": "boolean",
+        "default": false,
+        "description": "Mở file trong Word sau khi tạo"
+      }
+    },
+    "required": [
+      "file_path",
+      "document_title",
+      "sections"
+    ]
+  }
+}

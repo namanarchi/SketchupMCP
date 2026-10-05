@@ -1,0 +1,29 @@
+{
+  "name": "excel_export_pdf",
+  "description": "Xuất file Excel (.xlsx) sang định dạng PDF chuẩn in ấn thông qua engine Microsoft Excel COM.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "excel_path": {
+        "type": "string",
+        "description": "Đường dẫn file .xlsx gốc"
+      },
+      "pdf_path": {
+        "type": "string",
+        "description": "Đường dẫn lưu file .pdf xuất xưởng"
+      },
+      "orientation": {
+        "type": "string",
+        "enum": [
+          "landscape",
+          "portrait"
+        ],
+        "default": "landscape",
+        "description": "Hướng trang in: landscape (ngang), portrait (dọc)"
+      }
+    },
+    "required": [
+      "excel_path"
+    ]
+  }
+}

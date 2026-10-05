@@ -1,0 +1,130 @@
+{
+  "success": true,
+  "total_folders": 11,
+  "folders": [
+    {
+      "folder": "01. KHU VỆ SINH & NHÀ TẮM",
+      "count": 6,
+      "layers": [
+        "BSQ-NVS-TONG-THE",
+        "BSQ-NVS-THIET-BI-SU",
+        "BSQ-NVS-SEN-TAM",
+        "BSQ-NVS-VACH-COMPACT",
+        "BSQ-NVS-THOAT-NUOC",
+        "BSQ-NVS-BE-TU-HOAI"
+      ]
+    },
+    {
+      "folder": "02. KHU KÝ TÚC XÁ",
+      "count": 5,
+      "layers": [
+        "BSQ-KTX-TONG-THE",
+        "BSQ-KTX-CONTAINER-TANG-1",
+        "BSQ-KTX-CONTAINER-TANG-2",
+        "BSQ-KTX-GIUONG-TANG",
+        "BSQ-KTX-CAU-THANG-LAN-CAN"
+      ]
+    },
+    {
+      "folder": "03. KHU CĂN TIN & NHÀ BẾP",
+      "count": 4,
+      "layers": [
+        "BSQ-CANTIN-TONG-THE",
+        "BSQ-CANTIN-BAN-GHE-AN",
+        "BSQ-CANTIN-BEP-NAU",
+        "BSQ-CANTIN-KHO-THUC-PHAM"
+      ]
+    },
+    {
+      "folder": "10. CẤU KIỆN CHUNG & KẾT CẤU",
+      "count": 8,
+      "layers": [
+        "BSQ-CHUNG-KHUNG-CONTAINER",
+        "BSQ-CHUNG-SAN-CONTAINER",
+        "BSQ-CHUNG-TRAN-CONTAINER",
+        "BSQ-CHUNG-VACH-CONTAINER",
+        "BSQ-CHUNG-CUA-DI-CUA-SO",
+        "BSQ-CHUNG-KHUNG-VI-KEO",
+        "BSQ-CHUNG-COT-THEP",
+        "BSQ-CHUNG-MAI-TON"
+      ]
+    },
+    {
+      "folder": "11. BẢN VẼ KỸ THUẬT 2D",
+      "count": 2,
+      "layers": [
+        "BSQ-2D-CAD-DINH-VI",
+        "BSQ-2D-MAT-CAT-SECTION"
+      ]
+    },
+    {
+      "folder": "04. KHU KHO VẬT TƯ TỔNG HỢP",
+      "count": 11,
+      "layers": [
+        "BSQ-KHO-BAI-TONG-THE",
+        "BSQ-KHO-BAI-MONG-COC",
+        "BSQ-KHO-BAI-COT-THEP",
+        "BSQ-KHO-BAI-KHUNG-VI-KEO",
+        "BSQ-KHO-BAI-XA-GO-MAI",
+        "BSQ-KHO-BAI-MAI-TON",
+        "BSQ-KHO-BAI-VACH-TON",
+        "BSQ-KHO-BAI-GIANG-VACH",
+        "BSQ-KHO-BAI-SAN-BE-TONG",
+        "BSQ-KHO-BAI-THIET-BI-MAY-MOC",
+        "BSQ-KHO-BAI-PHE-LIEU-COPPHA"
+      ]
+    },
+    {
+      "folder": "05. KHU GIA CÔNG CƠ KHÍ 36X8M",
+      "count": 9,
+      "layers": [
+        "BSQ-GIA-CONG-COT-THEP",
+        "BSQ-GIA-CONG-KHUNG-VI-KEO",
+        "BSQ-GIA-CONG-XA-GO-MAI",
+        "BSQ-GIA-CONG-MAI-TON",
+        "BSQ-GIA-CONG-VACH-TON",
+        "BSQ-GIA-CONG-GIANG-VACH",
+        "BSQ-KHO-BAI-MAY-MOC-THEP",
+        "BSQ-KHO-BAI-THEP-NGUYEN-LIEU",
+        "BSQ-KHO-BAI-THEP-THANH-PHAM"
+      ]
+    },
+    {
+      "folder": "06. CỔNG CHÍNH & HÀNG RÀO",
+      "count": 3,
+      "layers": [
+        "BSQ-CONG-RAO-CONG-CHINH",
+        "BSQ-CONG-RAO-HANG-RAO",
+        "BSQ-CONG-RAO-BOT-BAO-VE"
+      ]
+    },
+    {
+      "folder": "07. VĂN PHÒNG KHO",
+      "count": 4,
+      "layers": [
+        "BSQ-VP-KHO-TONG-THE",
+        "BSQ-VP-KHO-VO-CONTAINER",
+        "BSQ-VP-KHO-CUA",
+        "BSQ-VP-KHO-NOI-THAT"
+      ]
+    },
+    {
+      "folder": "08. HẠ TẦNG NỀN & BÃI XE",
+      "count": 2,
+      "layers": [
+        "BSQ-HT-NEN-BE-TONG",
+        "BSQ-HT-NEN-DAT"
+      ]
+    },
+    {
+      "folder": "09. AN TOÀN & PCCC",
+      "count": 3,
+      "layers": [
+        "BSQ-AT-BARIE-CANH-BAO",
+        "BSQ-AT-VACH-SON-LAN",
+        "BSQ-AT-BIEN-BAO-PANO"
+      ]
+    }
+  ],
+  "unorganized_remaining": []
+}

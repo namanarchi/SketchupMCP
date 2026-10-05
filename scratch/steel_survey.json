@@ -1,0 +1,1204 @@
+{
+  "total_materials": 97,
+  "materials": [
+    {
+      "name": "<auto>",
+      "color": [
+        255,
+        255,
+        255
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "<auto>1",
+      "color": [
+        128,
+        128,
+        128
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "<auto>2",
+      "color": [
+        255,
+        0,
+        0
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "<auto>4",
+      "color": [
+        0,
+        255,
+        0
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "<auto>5",
+      "color": [
+        0,
+        255,
+        255
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "<auto>6",
+      "color": [
+        255,
+        255,
+        0
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "Thep_Cot_Keo_Xam_Ghi",
+      "color": [
+        85,
+        90,
+        95
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "Ban_Ma_Thep_10mm",
+      "color": [
+        121,
+        127,
+        132
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "Bu_Long_Inox_M16",
+      "color": [
+        230,
+        230,
+        235
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "Ton_Mai_Xanh_Navy",
+      "color": [
+        25,
+        65,
+        145
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "Be_Tong_Mong_Mac200",
+      "color": [
+        160,
+        160,
+        160
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "Container_Anthracite_1E232A",
+      "color": [
+        30,
+        35,
+        42
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "Container_Metal_Chrome",
+      "color": [
+        200,
+        200,
+        205
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "Container_Glass_LightBlue",
+      "color": [
+        160,
+        215,
+        245
+      ],
+      "alpha": 0.4,
+      "texture": null
+    },
+    {
+      "name": "Container_Window_White_FFFFFF",
+      "color": [
+        255,
+        255,
+        255
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "Container_Panel_White_FAFAFA",
+      "color": [
+        250,
+        250,
+        250
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "Nền đất tự nhiên",
+      "color": [
+        205,
+        175,
+        135
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "Container_Ceiling_White",
+      "color": [
+        245,
+        245,
+        248
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "Container_Door_Green_KTX",
+      "color": [
+        115,
+        122,
+        132
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "KTX_Bed_Frame_Dark",
+      "color": [
+        45,
+        50,
+        58
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "KTX_Mattress_Fabric",
+      "color": [
+        230,
+        235,
+        240
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "KTX_Pillow_Blue",
+      "color": [
+        71,
+        97,
+        240
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "KTX_Steel_Grey",
+      "color": [
+        90,
+        95,
+        105
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "KTX_Corridor_Col_Purple",
+      "color": [
+        180,
+        40,
+        160
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "Be_Tong_Nen_BT100",
+      "color": [
+        185,
+        185,
+        185
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "AI_Steel_Dark",
+      "color": [
+        45,
+        52,
+        58
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "AI_Steel_Inox",
+      "color": [
+        200,
+        205,
+        210
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "Container_Door_Grey",
+      "color": [
+        115,
+        122,
+        132
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "Glass_Basic_01",
+      "color": [
+        161,
+        173,
+        186
+      ],
+      "alpha": 0.25,
+      "texture": null
+    },
+    {
+      "name": "San_Gach_Chong_Truot_WC",
+      "color": [
+        175,
+        180,
+        185
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "Vach_Compact_Ghi_Sang",
+      "color": [
+        220,
+        224,
+        230
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "Inox_Ghi_Thoat_San",
+      "color": [
+        113,
+        108,
+        103
+      ],
+      "alpha": 1,
+      "texture": "grating_mesh.bmp"
+    },
+    {
+      "name": "Su_Trang_Ve_Sinh",
+      "color": [
+        255,
+        255,
+        255
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "Pano_Nha_Tam_Nam_Red",
+      "color": [
+        211,
+        47,
+        47
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "Pano_WC_Nam_Cyan",
+      "color": [
+        0,
+        151,
+        167
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "Pano_WC_Nu_Magenta",
+      "color": [
+        194,
+        24,
+        91
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "Pano_Nha_Tam_Nu_Yellow",
+      "color": [
+        255,
+        160,
+        0
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "VT_Go_Pallet_Vang",
+      "color": [
+        205,
+        160,
+        110
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "VT_Bao_Xi_Mang_Kraft",
+      "color": [
+        185,
+        178,
+        165
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "VT_Thep_Ma_Kem_Sang",
+      "color": [
+        215,
+        220,
+        225
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "VT_Thep_Den_Cong_Nghiep",
+      "color": [
+        50,
+        52,
+        56
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "Thep_Cot_Xam_Ghi",
+      "color": [
+        90,
+        95,
+        100
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "Ton_Vach_Xam_Sang",
+      "color": [
+        215,
+        220,
+        225
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "Thep_Can_Nong_Xam_Den",
+      "color": [
+        50,
+        52,
+        56
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "Tem_Thep_Xanh_Trang",
+      "color": [
+        25,
+        118,
+        210
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "Go_Ta_Vet_Ke_Day",
+      "color": [
+        175,
+        135,
+        90
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "Bat_Phu_Thep_Cam_PVC",
+      "color": [
+        235,
+        95,
+        15
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "Bat_Phu_Thep_Xanh_Reu",
+      "color": [
+        35,
+        90,
+        60
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "Dai_Kep_Thep_Vang",
+      "color": [
+        255,
+        205,
+        0
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "May_Gia_Cong_Xanh_La",
+      "color": [
+        38,
+        120,
+        60
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "May_Gia_Cong_Xanh_Duong",
+      "color": [
+        21,
+        101,
+        192
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "May_Uon_Cam_Cong_Nghiep",
+      "color": [
+        245,
+        124,
+        0
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "Sat_Thep_Den_Mo",
+      "color": [
+        45,
+        45,
+        45
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "Tu_Dien_3Pha_Cam",
+      "color": [
+        255,
+        110,
+        0
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "Barie_Vang_Canh_Bao",
+      "color": [
+        255,
+        215,
+        0
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "Barie_Den_Canh_Bao",
+      "color": [
+        30,
+        30,
+        30
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "Son_Vach_Vang_Phan_Quang",
+      "color": [
+        255,
+        215,
+        0
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "VT_Phuy_Sat_Xanh_Epoxy",
+      "color": [
+        15,
+        75,
+        160
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "VT_Khay_Chong_Tran_Vang",
+      "color": [
+        250,
+        210,
+        20
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "VT_Ke_Thep_Xanh_CN",
+      "color": [
+        20,
+        80,
+        150
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "VT_Ke_Thep_Cam_CN",
+      "color": [
+        240,
+        100,
+        15
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "VT_Hop_Do_Nghe_Do",
+      "color": [
+        210,
+        30,
+        30
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "VT_Van_Khuon_Phu_Phim_Nau",
+      "color": [
+        75,
+        45,
+        30
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "VT_Gian_Giao_Son_Do",
+      "color": [
+        215,
+        35,
+        35
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "Be_Tong_Lot_M100",
+      "color": [
+        175,
+        175,
+        175
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "Be_Tong_BTCT_M250",
+      "color": [
+        135,
+        140,
+        145
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "Tuong_Gach_Chong_Tham",
+      "color": [
+        185,
+        95,
+        65
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "Nuoc_Thai_Tu_Hoai",
+      "color": [
+        65,
+        125,
+        175
+      ],
+      "alpha": 0.6,
+      "texture": null
+    },
+    {
+      "name": "Lop_Soi_Loc_20x40",
+      "color": [
+        145,
+        140,
+        130
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "Gia_The_Vi_Sinh_Than_Loc",
+      "color": [
+        35,
+        35,
+        40
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "Nap_Gang_Gieng_Tham",
+      "color": [
+        45,
+        45,
+        50
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "Tru_BTCT_Goc_Cyan",
+      "color": [
+        0,
+        220,
+        220
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "Ong_uPVC_Cad_Vang",
+      "color": [
+        255,
+        204,
+        0
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "<auto>11",
+      "color": [
+        0,
+        0,
+        255
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "Thep_Nham_Chong_Truot",
+      "color": [
+        45,
+        50,
+        58
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "AI_Panel_White",
+      "color": [
+        245,
+        245,
+        245
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "Thep_Ma_Kem_BuLong",
+      "color": [
+        180,
+        185,
+        190
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "Be_Tong_Mong",
+      "color": [
+        190,
+        190,
+        190
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "Thep_Xam_Dong_Bo",
+      "color": [
+        90,
+        95,
+        100
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "Ton_Rao_Ma_Kem",
+      "color": [
+        71,
+        97,
+        240
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "Nap_Ton_Dinh",
+      "color": [
+        71,
+        97,
+        240
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "Ong_Thong_Hoi_uPVC_D90",
+      "color": [
+        215,
+        220,
+        225
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "Gang_Nap_Ho_Ga",
+      "color": [
+        60,
+        65,
+        70
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "2x2_v10_wall_finish",
+      "color": [
+        218,
+        218,
+        218
+      ],
+      "alpha": 1,
+      "texture": "2x2_v10_wall_finish_bump.jpg"
+    },
+    {
+      "name": "AI_Panel_White1",
+      "color": [
+        250,
+        250,
+        250
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "[0102_RoyalBlue]",
+      "color": [
+        71,
+        97,
+        240
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "Ban_Le_Thep",
+      "color": [
+        90,
+        95,
+        100
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "Navy_Pano_Bg",
+      "color": [
+        71,
+        97,
+        240
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "Pano_Ban_Chi_Huy_Moi",
+      "color": [
+        48,
+        68,
+        94
+      ],
+      "alpha": 1,
+      "texture": "pano_dinh_van_phong_ban_chi_huy.png"
+    },
+    {
+      "name": "[Translucent Glass Blue]",
+      "color": [
+        100,
+        149,
+        237
+      ],
+      "alpha": 0.55,
+      "texture": null
+    },
+    {
+      "name": "AI_Base_Floor",
+      "color": [
+        135,
+        140,
+        145
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "Container_Floor_Wood_SPC",
+      "color": [
+        205,
+        175,
+        135
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "Go_Melamine_Oak",
+      "color": [
+        215,
+        185,
+        145
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "Sat_Son_Ghi_Sang",
+      "color": [
+        200,
+        205,
+        210
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "Thep_Den_Mo",
+      "color": [
+        45,
+        52,
+        58
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "Do_PCCC_Binh_Chua_Chay",
+      "color": [
+        220,
+        35,
+        35
+      ],
+      "alpha": 1,
+      "texture": null
+    },
+    {
+      "name": "Vang_Bao_Ho",
+      "color": [
+        255,
+        204,
+        0
+      ],
+      "alpha": 1,
+      "texture": null
+    }
+  ],
+  "total_steel_entities_found": 940,
+  "steel_samples": [
+    {
+      "path": "Day_Container_Tang_1_13_Can >  > Khung_Ket_Cau_Anthracite",
+      "name": "Khung_Ket_Cau_Anthracite",
+      "class": "Sketchup::Group",
+      "layer": "BSQ-CHUNG-KHUNG-CONTAINER",
+      "material": "nil"
+    },
+    {
+      "path": "Day_Container_Tang_1_13_Can >  > Khung_Ket_Cau_Anthracite",
+      "name": "Khung_Ket_Cau_Anthracite",
+      "class": "Sketchup::Group",
+      "layer": "BSQ-CHUNG-KHUNG-CONTAINER",
+      "material": "nil"
+    },
+    {
+      "path": "Day_Container_Tang_1_13_Can >  > Khung_Ket_Cau_Anthracite",
+      "name": "Khung_Ket_Cau_Anthracite",
+      "class": "Sketchup::Group",
+      "layer": "BSQ-CHUNG-KHUNG-CONTAINER",
+      "material": "nil"
+    },
+    {
+      "path": "Day_Container_Tang_1_13_Can >  > Khung_Ket_Cau_Anthracite",
+      "name": "Khung_Ket_Cau_Anthracite",
+      "class": "Sketchup::Group",
+      "layer": "BSQ-CHUNG-KHUNG-CONTAINER",
+      "material": "nil"
+    },
+    {
+      "path": "Day_Container_Tang_1_13_Can >  > Khung_Ket_Cau_Anthracite",
+      "name": "Khung_Ket_Cau_Anthracite",
+      "class": "Sketchup::Group",
+      "layer": "BSQ-CHUNG-KHUNG-CONTAINER",
+      "material": "nil"
+    },
+    {
+      "path": "Day_Container_Tang_1_13_Can >  > Khung_Ket_Cau_Anthracite",
+      "name": "Khung_Ket_Cau_Anthracite",
+      "class": "Sketchup::Group",
+      "layer": "BSQ-CHUNG-KHUNG-CONTAINER",
+      "material": "nil"
+    },
+    {
+      "path": "Day_Container_Tang_1_13_Can >  > Khung_Ket_Cau_Anthracite",
+      "name": "Khung_Ket_Cau_Anthracite",
+      "class": "Sketchup::Group",
+      "layer": "BSQ-CHUNG-KHUNG-CONTAINER",
+      "material": "nil"
+    },
+    {
+      "path": "Day_Container_Tang_1_13_Can >  > Khung_Ket_Cau_Anthracite",
+      "name": "Khung_Ket_Cau_Anthracite",
+      "class": "Sketchup::Group",
+      "layer": "BSQ-CHUNG-KHUNG-CONTAINER",
+      "material": "nil"
+    },
+    {
+      "path": "Day_Container_Tang_1_13_Can >  > Khung_Ket_Cau_Anthracite",
+      "name": "Khung_Ket_Cau_Anthracite",
+      "class": "Sketchup::Group",
+      "layer": "BSQ-CHUNG-KHUNG-CONTAINER",
+      "material": "nil"
+    },
+    {
+      "path": "Day_Container_Tang_1_13_Can >  > Khung_Ket_Cau_Anthracite",
+      "name": "Khung_Ket_Cau_Anthracite",
+      "class": "Sketchup::Group",
+      "layer": "BSQ-CHUNG-KHUNG-CONTAINER",
+      "material": "nil"
+    },
+    {
+      "path": "Day_Container_Tang_1_13_Can >  > Khung_Ket_Cau_Anthracite",
+      "name": "Khung_Ket_Cau_Anthracite",
+      "class": "Sketchup::Group",
+      "layer": "BSQ-CHUNG-KHUNG-CONTAINER",
+      "material": "nil"
+    },
+    {
+      "path": "Day_Container_Tang_1_13_Can >  > Khung_Ket_Cau_Anthracite",
+      "name": "Khung_Ket_Cau_Anthracite",
+      "class": "Sketchup::Group",
+      "layer": "BSQ-CHUNG-KHUNG-CONTAINER",
+      "material": "nil"
+    },
+    {
+      "path": "Day_Container_Tang_1_13_Can >  > Khung_Ket_Cau_Anthracite",
+      "name": "Khung_Ket_Cau_Anthracite",
+      "class": "Sketchup::Group",
+      "layer": "BSQ-CHUNG-KHUNG-CONTAINER",
+      "material": "nil"
+    },
+    {
+      "path": "Day_Container_Tang_2_13_Can >  > Khung_Ket_Cau_Anthracite",
+      "name": "Khung_Ket_Cau_Anthracite",
+      "class": "Sketchup::Group",
+      "layer": "BSQ-CHUNG-KHUNG-CONTAINER",
+      "material": "nil"
+    },
+    {
+      "path": "Day_Container_Tang_2_13_Can >  > Khung_Ket_Cau_Anthracite",
+      "name": "Khung_Ket_Cau_Anthracite",
+      "class": "Sketchup::Group",
+      "layer": "BSQ-CHUNG-KHUNG-CONTAINER",
+      "material": "nil"
+    },
+    {
+      "path": "Day_Container_Tang_2_13_Can >  > Khung_Ket_Cau_Anthracite",
+      "name": "Khung_Ket_Cau_Anthracite",
+      "class": "Sketchup::Group",
+      "layer": "BSQ-CHUNG-KHUNG-CONTAINER",
+      "material": "nil"
+    },
+    {
+      "path": "Day_Container_Tang_2_13_Can >  > Khung_Ket_Cau_Anthracite",
+      "name": "Khung_Ket_Cau_Anthracite",
+      "class": "Sketchup::Group",
+      "layer": "BSQ-CHUNG-KHUNG-CONTAINER",
+      "material": "nil"
+    },
+    {
+      "path": "Day_Container_Tang_2_13_Can >  > Khung_Ket_Cau_Anthracite",
+      "name": "Khung_Ket_Cau_Anthracite",
+      "class": "Sketchup::Group",
+      "layer": "BSQ-CHUNG-KHUNG-CONTAINER",
+      "material": "nil"
+    },
+    {
+      "path": "Day_Container_Tang_2_13_Can >  > Khung_Ket_Cau_Anthracite",
+      "name": "Khung_Ket_Cau_Anthracite",
+      "class": "Sketchup::Group",
+      "layer": "BSQ-CHUNG-KHUNG-CONTAINER",
+      "material": "nil"
+    },
+    {
+      "path": "Day_Container_Tang_2_13_Can >  > Khung_Ket_Cau_Anthracite",
+      "name": "Khung_Ket_Cau_Anthracite",
+      "class": "Sketchup::Group",
+      "layer": "BSQ-CHUNG-KHUNG-CONTAINER",
+      "material": "nil"
+    },
+    {
+      "path": "Day_Container_Tang_2_13_Can >  > Khung_Ket_Cau_Anthracite",
+      "name": "Khung_Ket_Cau_Anthracite",
+      "class": "Sketchup::Group",
+      "layer": "BSQ-CHUNG-KHUNG-CONTAINER",
+      "material": "nil"
+    },
+    {
+      "path": "Day_Container_Tang_2_13_Can >  > Khung_Ket_Cau_Anthracite",
+      "name": "Khung_Ket_Cau_Anthracite",
+      "class": "Sketchup::Group",
+      "layer": "BSQ-CHUNG-KHUNG-CONTAINER",
+      "material": "nil"
+    },
+    {
+      "path": "Day_Container_Tang_2_13_Can >  > Khung_Ket_Cau_Anthracite",
+      "name": "Khung_Ket_Cau_Anthracite",
+      "class": "Sketchup::Group",
+      "layer": "BSQ-CHUNG-KHUNG-CONTAINER",
+      "material": "nil"
+    },
+    {
+      "path": "Day_Container_Tang_2_13_Can >  > Khung_Ket_Cau_Anthracite",
+      "name": "Khung_Ket_Cau_Anthracite",
+      "class": "Sketchup::Group",
+      "layer": "BSQ-CHUNG-KHUNG-CONTAINER",
+      "material": "nil"
+    },
+    {
+      "path": "Day_Container_Tang_2_13_Can >  > Khung_Ket_Cau_Anthracite",
+      "name": "Khung_Ket_Cau_Anthracite",
+      "class": "Sketchup::Group",
+      "layer": "BSQ-CHUNG-KHUNG-CONTAINER",
+      "material": "nil"
+    },
+    {
+      "path": "Day_Container_Tang_2_13_Can >  > Khung_Ket_Cau_Anthracite",
+      "name": "Khung_Ket_Cau_Anthracite",
+      "class": "Sketchup::Group",
+      "layer": "BSQ-CHUNG-KHUNG-CONTAINER",
+      "material": "nil"
+    },
+    {
+      "path": "Cau_Thang_Thep_Dau_Hoi_Trai",
+      "name": "Cau_Thang_Thep_Dau_Hoi_Trai",
+      "class": "Sketchup::Group",
+      "layer": "BSQ-KTX-CAU-THANG-LAN-CAN",
+      "material": "nil"
+    },
+    {
+      "path": "Cau_Thang_Thep_Dau_Hoi_Trai > He_15_Bac_Thang_Thep_Nham_900x300",
+      "name": "He_15_Bac_Thang_Thep_Nham_900x300",
+      "class": "Sketchup::Group",
+      "layer": "BSQ-KTX-CAU-THANG-LAN-CAN",
+      "material": "nil"
+    },
+    {
+      "path": "Cau_Thang_Thep_Dau_Hoi_Trai > He_Con_Thang_Va_Ban_Ma_Chan_Thang",
+      "name": "He_Con_Thang_Va_Ban_Ma_Chan_Thang",
+      "class": "Sketchup::Group",
+      "layer": "BSQ-KTX-CAU-THANG-LAN-CAN",
+      "material": "nil"
+    },
+    {
+      "path": "Cau_Thang_Thep_Dau_Hoi_Trai > He_Con_Thang_Va_Ban_Ma_Chan_Thang > Ban_Ma_Chan_Con_Trai",
+      "name": "Ban_Ma_Chan_Con_Trai",
+      "class": "Sketchup::Group",
+      "layer": "BSQ-KTX-CAU-THANG-LAN-CAN",
+      "material": "Container_Anthracite_1E232A"
+    }
+  ],
+  "materials_used_by_steel": [
+    "nil",
+    "Container_Anthracite_1E232A",
+    "Container_Door_Grey",
+    "Thep_Cot_Xam_Ghi",
+    "Sat_Thep_Den_Mo",
+    "Ban_Ma_Thep_10mm",
+    "Thep_Cot_Keo_Xam_Ghi",
+    "VT_Thep_Ma_Kem_Sang",
+    "VT_Ke_Thep_Xanh_CN",
+    "Thep_Xam_Dong_Bo",
+    "Sat_Son_Ghi_Sang",
+    "Thep_Den_Mo",
+    "Barie_Den_Canh_Bao",
+    "VT_Thep_Den_Cong_Nghiep"
+  ]
+}

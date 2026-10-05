@@ -1,0 +1,294 @@
+{
+  "folders": {
+    "01. KHU VỆ SINH & NHÀ TẮM": {
+      "name": "01. KHU VỆ SINH & NHÀ TẮM",
+      "visible": true,
+      "layers": [
+        {
+          "name": "BSQ-NVS-TONG-THE",
+          "visible": true
+        },
+        {
+          "name": "BSQ-NVS-THIET-BI-SU",
+          "visible": true
+        },
+        {
+          "name": "BSQ-NVS-SEN-TAM",
+          "visible": true
+        },
+        {
+          "name": "BSQ-NVS-VACH-COMPACT",
+          "visible": true
+        },
+        {
+          "name": "BSQ-NVS-THOAT-NUOC",
+          "visible": true
+        },
+        {
+          "name": "BSQ-NVS-BE-TU-HOAI",
+          "visible": true
+        }
+      ]
+    },
+    "02. KHU KÝ TÚC XÁ": {
+      "name": "02. KHU KÝ TÚC XÁ",
+      "visible": true,
+      "layers": [
+        {
+          "name": "BSQ-KTX-TONG-THE",
+          "visible": true
+        },
+        {
+          "name": "BSQ-KTX-CONTAINER-TANG-1",
+          "visible": true
+        },
+        {
+          "name": "BSQ-KTX-CONTAINER-TANG-2",
+          "visible": true
+        },
+        {
+          "name": "BSQ-KTX-GIUONG-TANG",
+          "visible": true
+        },
+        {
+          "name": "BSQ-KTX-CAU-THANG-LAN-CAN",
+          "visible": true
+        }
+      ]
+    },
+    "03. KHU CĂN TIN & NHÀ BẾP": {
+      "name": "03. KHU CĂN TIN & NHÀ BẾP",
+      "visible": true,
+      "layers": [
+        {
+          "name": "BSQ-CANTIN-TONG-THE",
+          "visible": true
+        },
+        {
+          "name": "BSQ-CANTIN-BAN-GHE-AN",
+          "visible": true
+        },
+        {
+          "name": "BSQ-CANTIN-BEP-NAU",
+          "visible": true
+        },
+        {
+          "name": "BSQ-CANTIN-KHO-THUC-PHAM",
+          "visible": true
+        }
+      ]
+    },
+    "04. KHU KHO & BÃI GIA CÔNG": {
+      "name": "04. KHU KHO & BÃI GIA CÔNG",
+      "visible": true,
+      "layers": [
+        {
+          "name": "BSQ-KHO-BAI-TONG-THE",
+          "visible": true
+        },
+        {
+          "name": "BSQ-KHO-BAI-MAY-MOC-THEP",
+          "visible": true
+        },
+        {
+          "name": "BSQ-KHO-BAI-THEP-NGUYEN-LIEU",
+          "visible": true
+        },
+        {
+          "name": "BSQ-KHO-BAI-THEP-THANH-PHAM",
+          "visible": true
+        },
+        {
+          "name": "BSQ-KHO-BAI-PHE-LIEU-COPPHA",
+          "visible": true
+        }
+      ]
+    },
+    "05. CỔNG CHÍNH & HÀNG RÀO": {
+      "name": "05. CỔNG CHÍNH & HÀNG RÀO",
+      "visible": true,
+      "layers": [
+        {
+          "name": "BSQ-CONG-RAO-CONG-CHINH",
+          "visible": true
+        },
+        {
+          "name": "BSQ-CONG-RAO-HANG-RAO",
+          "visible": true
+        },
+        {
+          "name": "BSQ-CONG-RAO-BOT-BAO-VE",
+          "visible": true
+        }
+      ]
+    },
+    "06. CẤU KIỆN CHUNG & KẾT CẤU": {
+      "name": "06. CẤU KIỆN CHUNG & KẾT CẤU",
+      "visible": true,
+      "layers": [
+        {
+          "name": "BSQ-CHUNG-KHUNG-CONTAINER",
+          "visible": true
+        },
+        {
+          "name": "BSQ-CHUNG-SAN-CONTAINER",
+          "visible": true
+        },
+        {
+          "name": "BSQ-CHUNG-TRAN-CONTAINER",
+          "visible": true
+        },
+        {
+          "name": "BSQ-CHUNG-VACH-CONTAINER",
+          "visible": true
+        },
+        {
+          "name": "BSQ-CHUNG-CUA-DI-CUA-SO",
+          "visible": true
+        },
+        {
+          "name": "BSQ-CHUNG-KHUNG-VI-KEO",
+          "visible": true
+        },
+        {
+          "name": "BSQ-CHUNG-COT-THEP",
+          "visible": true
+        },
+        {
+          "name": "BSQ-CHUNG-MAI-TON",
+          "visible": true
+        }
+      ]
+    },
+    "07. HẠ TẦNG NỀN & BÃI XE": {
+      "name": "07. HẠ TẦNG NỀN & BÃI XE",
+      "visible": true,
+      "layers": [
+        {
+          "name": "BSQ-HT-NEN-BE-TONG",
+          "visible": true
+        },
+        {
+          "name": "BSQ-HT-NEN-DAT",
+          "visible": true
+        }
+      ]
+    },
+    "08. AN TOÀN & PCCC": {
+      "name": "08. AN TOÀN & PCCC",
+      "visible": true,
+      "layers": [
+        {
+          "name": "BSQ-AT-BIEN-BAO-PANO",
+          "visible": true
+        },
+        {
+          "name": "BSQ-AT-BARIE-CANH-BAO",
+          "visible": true
+        },
+        {
+          "name": "BSQ-AT-VACH-SON-LAN",
+          "visible": true
+        }
+      ]
+    },
+    "09. VĂN PHÒNG KHO": {
+      "name": "09. VĂN PHÒNG KHO",
+      "visible": true,
+      "layers": [
+        {
+          "name": "BSQ-VP-KHO-NOI-THAT",
+          "visible": true
+        },
+        {
+          "name": "BSQ-VP-KHO-TONG-THE",
+          "visible": true
+        },
+        {
+          "name": "BSQ-VP-KHO-VO-CONTAINER",
+          "visible": true
+        },
+        {
+          "name": "BSQ-VP-KHO-CUA",
+          "visible": true
+        }
+      ]
+    },
+    "10. BẢN VẼ KỸ THUẬT 2D": {
+      "name": "10. BẢN VẼ KỸ THUẬT 2D",
+      "visible": true,
+      "layers": [
+        {
+          "name": "BSQ-2D-CAD-DINH-VI",
+          "visible": true
+        },
+        {
+          "name": "BSQ-2D-MAT-CAT-SECTION",
+          "visible": true
+        }
+      ]
+    }
+  },
+  "unorganized": [
+    {
+      "name": "BSQ-KHO-BAI-XA-GO-MAI",
+      "visible": true
+    },
+    {
+      "name": "BSQ-KHO-BAI-KHUNG-VI-KEO",
+      "visible": true
+    },
+    {
+      "name": "BSQ-KHO-BAI-COT-THEP",
+      "visible": true
+    },
+    {
+      "name": "BSQ-KHO-BAI-GIANG-VACH",
+      "visible": true
+    },
+    {
+      "name": "BSQ-KHO-BAI-MAI-TON",
+      "visible": true
+    },
+    {
+      "name": "BSQ-KHO-BAI-VACH-TON",
+      "visible": true
+    },
+    {
+      "name": "BSQ-KHO-BAI-SAN-BE-TONG",
+      "visible": true
+    },
+    {
+      "name": "BSQ-KHO-BAI-MONG-COC",
+      "visible": true
+    },
+    {
+      "name": "BSQ-KHO-BAI-THIET-BI-MAY-MOC",
+      "visible": true
+    },
+    {
+      "name": "BSQ-GIA-CONG-COT-THEP",
+      "visible": true
+    },
+    {
+      "name": "BSQ-GIA-CONG-KHUNG-VI-KEO",
+      "visible": true
+    },
+    {
+      "name": "BSQ-GIA-CONG-XA-GO-MAI",
+      "visible": true
+    },
+    {
+      "name": "BSQ-GIA-CONG-MAI-TON",
+      "visible": true
+    },
+    {
+      "name": "BSQ-GIA-CONG-VACH-TON",
+      "visible": true
+    },
+    {
+      "name": "BSQ-GIA-CONG-GIANG-VACH",
+      "visible": true
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "word_export_pdf",
+  "description": "Chuyển đổi tài liệu Word (.docx) sang tập tin PDF thông qua engine Microsoft Word COM.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "word_path": {
+        "type": "string",
+        "description": "Đường dẫn file .docx gốc"
+      },
+      "pdf_path": {
+        "type": "string",
+        "description": "Đường dẫn lưu file .pdf xuất xưởng"
+      }
+    },
+    "required": [
+      "word_path"
+    ]
+  }
+}

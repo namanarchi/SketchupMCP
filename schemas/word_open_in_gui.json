@@ -1,0 +1,16 @@
+{
+  "name": "word_open_in_gui",
+  "description": "Mở trực tiếp tài liệu Word (.docx) bằng ứng dụng Microsoft Word trên máy tính.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "file_path": {
+        "type": "string",
+        "description": "Đường dẫn file .docx cần mở"
+      }
+    },
+    "required": [
+      "file_path"
+    ]
+  }
+}

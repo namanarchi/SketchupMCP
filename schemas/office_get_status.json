@@ -1,0 +1,8 @@
+{
+  "name": "office_get_status",
+  "description": "Kiểm tra trạng thái cài đặt và phiên bản của Microsoft Office (Excel, Word) trên hệ thống Windows, các engine xử lý ExcelJS, Docx và các tính năng hỗ trợ.",
+  "parameters": {
+    "type": "object",
+    "properties": {}
+  }
+}

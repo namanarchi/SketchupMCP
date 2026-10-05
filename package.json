@@ -20,5 +20,9 @@
     "cad"
   ],
   "author": "namanarchi",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "docx": "^9.8.1",
+    "exceljs": "^4.4.0"
+  }
 }

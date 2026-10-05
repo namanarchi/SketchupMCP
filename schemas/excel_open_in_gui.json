@@ -1,0 +1,16 @@
+{
+  "name": "excel_open_in_gui",
+  "description": "Mở trực tiếp file Excel (.xlsx) bằng ứng dụng Microsoft Excel giao diện đồ họa.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "file_path": {
+        "type": "string",
+        "description": "Đường dẫn file .xlsx cần mở"
+      }
+    },
+    "required": [
+      "file_path"
+    ]
+  }
+}

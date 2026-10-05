@@ -80,6 +80,9 @@ Sketchup.active_model.save
    - Kèo hở thông thủy: **Không sử dụng hệ `Qua_Giang_Day` và `Chong_Dung_Dinh`** (xóa bỏ triệt để để tăng tối đa chiều cao lọt lòng). Tag: `BSQ-KHO-BAI-KHUNG-VI-KEO`.
    - Xà gồ mạ kẽm: Thay `He_Xa_Go_Mai_Thep_Hop_30x70` bằng **xà gồ mạ kẽm C100x50x15x1.2mm** với Tag riêng: **`BSQ-KHO-BAI-XA-GO-MAI`**.
    - Tự động đồng bộ Scene: Khi tạo các tag `BSQ-KHO-BAI-...` mới, tự động ẩn trên các Scene KTX, Cantin, NVS và bật trên các Scene Kho Bãi để cách ly tầm nhìn 100%.
+10. **Phối hợp chuỗi cao độ đa tầng & Xoay xà gồ vuông góc dốc mái**:
+   - Xà gồ mái BẮT BUỘC xoay nghiêng theo đúng góc dốc mái $\theta$ (mặt bích đáy áp sát mặt dốc vì kèo, thân vuông góc mặt dốc, cánh trên song song mặt dốc).
+   - Khi tăng chiều cao xà gồ ($H_{\text{cũ}} \to H_{\text{mới}}$), BẮT BUỘC nâng đồng bộ cao độ toàn bộ lớp tôn mái và úp nóc phía trên ($\Delta Z = \Delta H / \cos\theta$) để mặt đáy tôn tiếp xúc phẳng trên đỉnh xà gồ, TUYỆT ĐỐI KHÔNG để xà gồ đâm xuyên qua bề mặt tôn mái.
 
 ---
 
@@ -114,5 +117,23 @@ Khi triển khai bản vẽ LayOut từ mô hình SketchUp, Agent tuân thủ ng
    - Render Mode: Bắt buộc chọn **`Hybrid Render`**.
 8. **Tác Phong Chuyên Nghiệp**: Sạch sẽ, ngăn nắp, khoa học, chỉn chu, **tuyệt đối không làm nhanh đến mức cẩu thả**.
 
+---
 
+### Quy Chuẩn Kỹ Thuật Bổ Sung Về Mái Thép & Xà Gồ Kho Bãi (Architectural Roofing Discipline)
+
+9. **Tấm Úp Nóc Bắt Buộc Bẻ Góc Theo Mái Dốc**:
+   - Nghiêm cấm dùng tấm phẳng nằm ngang. Tấm úp nóc (Ridge Cap) bắt buộc bẻ gập chữ V úp ngược ôm sát theo độ dốc mái của từng phân đoạn:
+     - Nhánh ngang: Bẻ nghiêng dốc Nam-Bắc $\alpha = 7.62^\circ$ (mép ngoài hạ $26.75\text{ mm}$).
+     - Nhánh dọc: Bẻ nghiêng dốc Tây-Đông $\beta = 10.11^\circ$ (mép ngoài hạ $35.67\text{ mm}$).
+     - Độ rộng cánh mỗi bên $200\text{ mm}$, bề dày tôn dập $1.5 - 2.0\text{ mm}$.
+
+10. **Xà Gồ Thép Chữ C Mạ Kẽm Rỗng Thật (True C-Purlin Solid)**:
+    - **Tuyệt đối cấm dùng thép hộp chữ nhật đặc thay thế cho thép chữ C**.
+    - Xà gồ $C100\times 50\times 15\times 1.2\text{ mm}$ phải được tạo từ tiết diện 12 đỉnh khép kín có mép nẹp gấp $15\text{ mm}$, cánh $50\text{ mm}$, bụng $100\text{ mm}$ và bề dày thành thép $1.2\text{ mm}$.
+    - Đảm bảo tính chất Solid Manifold (`group.manifold? == true`), rỗng ruột đúng sản phẩm thực tế.
+
+11. **Kết Cấu Xà Gồ & Kèo Xiên Đoạn Bẻ Góc Giao Mái Chữ L**:
+    - Bắt buộc có **Thanh kèo sống nghiêng (Hip Rafter $\Box 60\times 120\text{ mm}$)** và **Thanh kèo xối âm (Valley Rafter $\Box 60\times 120\text{ mm}$)** trong cụm `Keo_Khung_Giao_Chu_L`.
+    - Toàn bộ các đường xà gồ từ 2 nhánh mái phải vươn tiếp vào vùng giao chữ L, vát góc (Jack Purlins) tựa chắc chắn lên thanh kèo sống nghiêng và xối âm.
+    - Đỡ trọn vẹn $100\%$ diện tích mái tôn góc giao, cấm bỏ trống.
 

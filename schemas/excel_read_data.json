@@ -1,0 +1,25 @@
+{
+  "name": "excel_read_data",
+  "description": "Đọc cấu trúc, danh sách các Sheets và dữ liệu hàng/cột từ file Excel (.xlsx) hiện hữu.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "file_path": {
+        "type": "string",
+        "description": "Đường dẫn file .xlsx cần đọc"
+      },
+      "sheet_name": {
+        "type": "string",
+        "description": "Tên Sheet cụ thể cần đọc (bỏ trống nếu muốn lấy danh sách toàn bộ Sheets)"
+      },
+      "max_rows": {
+        "type": "number",
+        "default": 100,
+        "description": "Số hàng tối đa cần đọc"
+      }
+    },
+    "required": [
+      "file_path"
+    ]
+  }
+}

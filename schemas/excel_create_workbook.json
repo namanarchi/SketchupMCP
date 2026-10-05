@@ -1,0 +1,122 @@
+{
+  "name": "excel_create_workbook",
+  "description": "Tạo tài liệu bảng tính Excel (.xlsx) mới chuyên nghiệp với nhiều Sheets, bảng khối lượng BOQ/dự toán chuẩn kỹ thuật xây dựng BSQUARE (màu sắc, viền ô, căn lề, định dạng số, công thức tự động tính tổng SUM).",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "file_path": {
+        "type": "string",
+        "description": "Đường dẫn tuyệt đối hoặc tương đối để lưu file .xlsx"
+      },
+      "title": {
+        "type": "string",
+        "description": "Tiêu đề chung của tập tài liệu bảng tính"
+      },
+      "project_name": {
+        "type": "string",
+        "description": "Tên dự án công trình (VD: KTX, KHO VT, BAI GIA CONG)"
+      },
+      "author": {
+        "type": "string",
+        "default": "Antigravity Architect AI & BSQUARE",
+        "description": "Tên người lập hoặc đơn vị thiết kế"
+      },
+      "sheets": {
+        "type": "array",
+        "description": "Danh sách các sheet cần tạo trong file Excel",
+        "items": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "Tên tab sheet (VD: TONG_HOP, KTX_2_TANG)"
+            },
+            "sheet_title": {
+              "type": "string",
+              "description": "Tiêu đề in lớn đầu trang sheet"
+            },
+            "subtitle": {
+              "type": "string",
+              "description": "Dòng phụ đề/ghi chú dưới tiêu đề"
+            },
+            "columns": {
+              "type": "array",
+              "description": "Danh sách các cột của bảng tính",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "header": {
+                    "type": "string",
+                    "description": "Tên tiêu đề cột"
+                  },
+                  "key": {
+                    "type": "string",
+                    "description": "Mã định danh dữ liệu (VD: stt, name, unit, qty, price, total)"
+                  },
+                  "width": {
+                    "type": "number",
+                    "description": "Độ rộng cột"
+                  },
+                  "align": {
+                    "type": "string",
+                    "enum": [
+                      "left",
+                      "center",
+                      "right"
+                    ],
+                    "default": "left"
+                  },
+                  "format": {
+                    "type": "string",
+                    "description": "Định dạng số (VD: #,##0.00 hoặc #,##0 hoặc 0.0%)"
+                  }
+                },
+                "required": [
+                  "header",
+                  "key"
+                ]
+              }
+            },
+            "rows": {
+              "type": "array",
+              "description": "Danh sách các hàng dữ liệu (mỗi phần tử là object chứa các key tương ứng với columns)",
+              "items": {
+                "type": "object"
+              }
+            },
+            "summary_row": {
+              "type": "boolean",
+              "default": true,
+              "description": "Tự động thêm hàng Tổng Cộng với hàm SUM ở cuối bảng"
+            },
+            "summary_label_col": {
+              "type": "string",
+              "description": "Cột hiển thị chữ TỔNG CỘNG (mặc định cột thứ 3 hoặc 2)"
+            },
+            "summary_sum_cols": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Danh sách key các cột cần tự động tính tổng SUM (VD: [\"quantity\", \"total\"])"
+            }
+          },
+          "required": [
+            "name",
+            "columns",
+            "rows"
+          ]
+        }
+      },
+      "open_after_create": {
+        "type": "boolean",
+        "default": false,
+        "description": "Tự động mở file trong Microsoft Excel sau khi tạo xong"
+      }
+    },
+    "required": [
+      "file_path",
+      "sheets"
+    ]
+  }
+}

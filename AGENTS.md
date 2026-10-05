@@ -46,6 +46,26 @@ Dự án sử dụng cơ chế MCP Server chạy local kết nối trực tiếp
 - `layout_open_in_gui`: Mở trực tiếp tập tin .layout bằng ứng dụng LayOut (LayOut.exe).
 - `layout_execute_ruby`: Thực thi Ruby tùy biến can thiệp trực tiếp vào Layout::Document.
 
+#### Nhóm 3: Mô hình thông tin công trình BIM (Autodesk Revit 2020)
+- `revit_get_status`: Kiểm tra kết nối tới pyRevit (Port 9878) và C# Native Add-in (Port 9877), thông tin dự án RVT đang mở.
+- `revit_execute_python`: Thực thi script Python Revit API trực tiếp qua pyRevit, can thiệp 100% đối tượng BIM.
+- `revit_create_materials`: Khởi tạo hàng loạt vật liệu Revit với mã màu RGB, độ bóng và độ trong suốt.
+- `revit_build_levels_grids`: Dựng hệ cao độ tầng (Levels) và hệ lưới trục (Grids) chuẩn xác.
+- `revit_create_floor`: Tạo sàn bê tông từ danh sách đỉnh tọa độ thực.
+- `revit_create_wall`: Tạo tường kiến trúc chuẩn xác từ điểm đầu và điểm cuối.
+- `revit_view_control`: Chuyển đổi và điều khiển khung nhìn 3D/2D trong Revit.
+
+#### Nhóm 4: Bóc Tách Khối Lượng, Dự Toán & Thuyết Minh Kỹ Thuật (Microsoft Office: Excel & Word)
+- `office_get_status`: Kiểm tra trạng thái kết nối Microsoft Excel, Word (COM 16.0) và các engine tạo file ExcelJS, Docx.
+- `excel_create_workbook`: Tạo file Excel (.xlsx) đa Sheet chuyên nghiệp với bảng khối lượng BOQ/tiên lượng, định dạng màu sắc BSQUARE, viền kẻ, căn lề, format tiền tệ và hàm tổng cộng tự động (`=SUM(...)`).
+- `excel_add_sheet`: Thêm hoặc cập nhật một Sheet mới vào file Excel hiện hữu.
+- `excel_read_data`: Đọc danh sách Sheet và dữ liệu hàng cột từ file Excel.
+- `excel_export_pdf`: Xuất file bảng tính Excel sang PDF chuẩn in ấn A4/A3 qua Excel COM Engine.
+- `excel_open_in_gui`: Mở trực tiếp file Excel trên ứng dụng Microsoft Excel giao diện đồ họa.
+- `word_create_document`: Tạo tài liệu Word (.docx) chuẩn TCVN có Header/Footer, số trang, tiêu đề phân cấp, bảng biểu và thuyết minh dự toán.
+- `word_export_pdf`: Xuất tài liệu Word sang PDF qua Word COM Engine.
+- `word_open_in_gui`: Mở trực tiếp tài liệu trên ứng dụng Microsoft Word.
+
 ---
 
 ## 3. Ngữ Cảnh Dự Án Thực Tế (`VP BCH.skp`)
@@ -102,6 +122,15 @@ Mô hình đang làm việc: `C:\Users\MAI KHANH\Downloads\VP BCH.skp`
    - **Hệ vì kèo không quá giang & không chống đứng (Open Gable Truss)**: **Tuyệt đối KHÔNG sử dụng hệ `Qua_Giang_Day` và `Chong_Dung_Dinh`**. Toàn bộ không gian dưới đáy giàn kèo được giải phóng 100% để tối đa hóa chiều cao thông thủy xe nâng và tập kết vật tư.
    - **Hệ xà gồ mạ kẽm C100x50x15x1.2mm (`BSQ-CHUNG-XA-GO-MAI`)**: Thay thế hoàn toàn hệ xà gồ thép hộp cũ $30\times 70\text{ mm}$ (`He_Xa_Go_Mai_Thep_Hop_30x70`) bằng xà gồ mạ kẽm chữ C chuẩn $C100\times 50\times 15\times 1.2\text{ mm}$.
    - **Kỷ luật bảo tồn Scene & Tag**: Toàn bộ các cấu kiện trên phải giữ nguyên Tag hệ thống (`BSQ-CHUNG-XA-GO-MAI`, `BSQ-CHUNG-COT-THEP`, `BSQ-CHUNG-KHUNG-VI-KEO`), tuyệt đối không tạo Tag mới làm sai lệch 48 Scene hiện hữu.
+8. **Hệ Khung Mái Tôn Khu Gia Công Cơ Khí 36x8m (`He_Khung_Mai_Ton_Khu_Gia_Cong_Co_Khi_36x8m`)**:
+   - **Vị trí & Quy mô**: Khối xưởng gia công thép gồm 2 nhà xưởng có mái che đối xứng: Xưởng B1 ($X \in [14750, 27250]$, $L = 12\text{ m}$, 4 khung trục $X = 15, 19, 23, 27\text{ m}$) và Xưởng B2 ($X \in [42750, 55250]$, $L = 12\text{ m}$, 4 khung trục $X = 43, 47, 51, 55\text{ m}$), khẩu độ ngang $B = 7.7\text{ m}$ ($Y \in [150, 7850]\text{ mm}$).
+   - **Dầm dọc biên Eave (`Dam_Doc_ST1_Eave_*`)**: Thép hộp $\Box 50\times 100\times 1.8\text{ mm}$ chạy chia 3 nhịp giữa các cột biên Nam ($Y \in [150, 200]$) và biên Bắc ($Y \in [7800, 7850]$) tại cao độ $Z \in [3515, 3615]\text{ mm}$, mép trên phẳng khít với đầu cột và đáy kèo.
+   - **Dầm dọc đỉnh nóc (`Dam_Doc_ST1_Dinh_Noc_*`)**: Thép hộp $\Box 60\times 120\times 2.0\text{ mm}$, **BẮT BUỘC ĐẶT CẠNH 120mm THEO PHƯƠNG DỌC (ĐỨNG CHỊU UỐN $Z = 120\text{ mm}$, $Z \in [4030, 4150]\text{ mm}$)**, ăn khớp tuyệt đối với đỉnh vì kèo tại $Y = 4000\text{ mm}$.
+   - **Hệ vì kèo không quá giang & không chống đứng (Open Gable Truss)**: Loại bỏ hoàn toàn `Qua_Giang_Day` và `Chong_Dung_Dinh` cùng các thanh chống phụ/giằng bụng treo lơ lửng, chỉ giữ lại `Canh_Keo_Doc_Hop_60x120` để giải phóng 100% không gian thông thủy gia công và máy móc.
+   - **Hệ xà gồ C100x50x15x1.2mm dựng đứng**: Bố trí 12 đường xà gồ mạ kẽm C100 dựng đứng (6 đường mái Nam, 6 đường mái Bắc), bước xà gồ đều đặn $a = 720.0\text{ mm}$ (dọc dốc $727\text{ mm}$), có xà gồ biên eave đỡ giọt gianh và xà gồ đỉnh nóc đỡ tấm úp nóc.
+   - **Mái tôn xanh Navy Zero-Gap**: Tiếp xúc phẳng khít khao Zero-gap ($\le 0.1\text{ mm}$) với mặt bích trên của toàn bộ xà gồ C100, độ dốc chuẩn xác $s = \frac{535}{3850} = 0.13896$, tôn úp nóc 3D bẻ gập chữ V bọc kín nóc.
+   - **Hệ giằng vách tôn sau lưng (`He_Giang_Vach_50x50`)**: 3 tầng xà gồ thép hộp $\Box 50\times 50\times 1.4\text{ mm}$ tại $Z = 1000, 1900, 2800\text{ mm}$ dọc theo Trục A ($Y \in [7800, 7850]$).
+   - **Hệ Tag phân khu độc lập**: Sử dụng hệ thống tag riêng biệt `BSQ-GIA-CONG-*` (`BSQ-GIA-CONG-COT-THEP`, `BSQ-GIA-CONG-KHUNG-VI-KEO`, `BSQ-GIA-CONG-XA-GO-MAI`, `BSQ-GIA-CONG-MAI-TON`, `BSQ-GIA-CONG-VACH-TON`, `BSQ-GIA-CONG-GIANG-VACH`), bảo tồn 100% hiển thị của 32 Scene.
 
 ---
 
@@ -407,7 +436,137 @@ Khi chỉnh sửa, thay thế hoặc nâng cấp bất kỳ cấu kiện nào tr
   - **Loại bỏ quá giang và chống đứng**: Các vì kèo Kho VT và Khu gia công chuyển thành dạng **kèo hở không quá giang đáy (`Qua_Giang_Day`) và không chống đứng nóc (`Chong_Dung_Dinh`)**, tăng tối đa không gian lọt lòng bên dưới. Tag: `BSQ-KHO-BAI-KHUNG-VI-KEO`.
   - **Xà gồ C mạ kẽm $C100\times 50\times 15\times 1.2\text{ mm}$**: Thay thế thép hộp cũ $30\times 70\text{ mm}$, tiết diện chữ C bản bụng $100\text{ mm}$, 2 cánh $50\text{ mm}$, mép gấp $15\text{ mm}$, bề dày $1.2\text{ mm}$, đặt tựa trên cánh trên vì kèo theo độ dốc mái. Tag: `BSQ-KHO-BAI-XA-GO-MAI`.
 
+### Nhóm 34: Quy Chuẩn Phối Hợp Cao Độ Đa Tầng Kết Cấu & Xoay Xà Gồ Theo Độ Dốc Mái (Multi-Layer Stack-Up Coordination & Sloped Purlin Discipline)
+* **Hiện tượng lỗi sai cơ bản**:
+  1. **Xà gồ đâm xuyên qua tôn mái**: Thanh xà gồ nhô lên trên bề mặt tôn lợp, tấm tôn cắt ngang qua giữa thân xà gồ.
+  2. **Xà gồ dựng đứng thẳng theo trục Z**: Tiết diện xà gồ dựng thẳng đứng theo trục thẳng đứng toàn cục `[0, 0, 1]`, khiến mặt bích trên nằm ngang trong khi tôn nằm dốc, không thể tạo mặt phẳng tiếp xúc để bắn vít liên kết.
+  3. **Đứt gãy chuỗi cao độ đa tầng (Stack-Up Disconnect)**: Khi nâng cấp tiết diện xà gồ từ $30\text{ mm}$ lên $100\text{ mm}$ (dày thêm $\approx 70\text{ mm}$), không nâng đồng bộ cao độ của các lớp vật liệu phủ bên trên (Tấm tôn lợp, Hệ thống úp nóc, Máng xối), khiến lớp tôn cũ bị chìm lọt thỏm vào thân cấu kiện mới.
+* **Hậu quả**: Phá vỡ tính chân thực vật lý, gây lỗi giao cắt hình học nghiêm trọng (Geometry Collision), render bị chớp giật vân bề mặt và bản vẽ mặt cắt kỹ thuật sai hoàn toàn nguyên lý cấu tạo xây dựng.
+* **Quy chuẩn bắt buộc khắc phục triệt để**:
+  1. **Quy tắc Xoay Tiết Diện Vuông Góc Độ Dốc Mái (Sloped Alignment Rule)**:
+     - Toàn bộ xà gồ mái (chữ C hoặc thép hộp) **BẮT BUỘC phải xoay nghiêng theo đúng góc dốc mái $\theta = \arctan(\Delta Z / \Delta L)$** của cánh trên vì kèo:
+       - Mặt đáy xà gồ áp phẳng lên mặt phẳng nghiêng cánh trên vì kèo.
+       - Thân bản bụng xà gồ ($H = 100\text{ mm}$) vuông góc với mặt dốc mái ($n_{\text{roof}}$).
+       - Cánh trên xà gồ ($B = 50\text{ mm}$) song song tuyệt đối với mặt dốc mái, hướng miệng chữ C lên phía đỉnh nóc để ngăn đọng nước và tạo mặt phẳng tựa bắn đinh vít.
+  2. **Quy tắc Phối Hợp Chuỗi Cao Độ Đa Tầng (Multi-Layer Stack-Up Coordination Rule)**:
+     - Khi thay đổi tiết diện của một lớp kết cấu bên dưới ($H_{\text{cũ}} \to H_{\text{mới}}$), Agent **BẮT BUỘC phải tự động tính toán và tịnh tiến dời cao độ toàn bộ các lớp cấu tạo nằm bên trên** theo phương vuông góc mái / trục Z:
+       $$\Delta Z_{\text{lift}} = \frac{H_{\text{mới}} - H_{\text{cũ}}}{\cos(\theta)}$$
+     - Đảm bảo trình tự tiếp xúc vật lý bất biến:
+       $$\text{Khung Vì Kèo (Dưới cùng)} \;\longrightarrow\; \text{Xà Gồ Mái (Giữa)} \;\longrightarrow\; \text{Tấm Tôn Lợp & Úp Nóc (Trên cùng)}$$
+     - Mặt đáy của tấm tôn lợp **PHẢI TIẾP XÚC PHẲNG TRÊN MẶT ĐỈNH CỦA XÀ GỒ**, tuyệt đối không để xà gồ đâm xuyên qua hoặc nổi lên trên bề mặt mái tôn.
 
+### Nhóm 35: Quy Chuẩn Tấm Úp Nóc Bẻ Góc Theo Mái Dốc (Bent Ridge Cap Discipline)
+* **Hiện tượng lỗi sai cơ bản**: Dựng tấm úp nóc (`Up_Noc_Canh_Ngang`, `Up_Noc_Canh_Doc`) là một thanh hộp chữ nhật nằm ngang phẳng lì, không bẻ góc dốc theo mái, tạo khe hở tam giác lớn hai bên hoặc chém xuyên vào đỉnh tôn mái.
+* **Quy chuẩn bắt buộc khắc phục**:
+  - Tấm úp nóc (Ridge Cap) **BẮT BUỘC phải là dạng chữ V úp ngược bẻ gập theo đúng góc dốc thực tế** của từng mái:
+    - Đường gập đỉnh nóc nằm chính xác tại tim nóc ($Y = 107007\text{ mm}$ cho nhánh ngang, $X = 7220\text{ mm}$ cho nhánh dọc).
+    - Hai cánh bẻ nghiêng chúc xuống theo góc dốc mái ($\alpha = 7.62^\circ$, $\Delta Z = -26.75\text{ mm}$ cho mái Nam-Bắc; $\beta = 10.11^\circ$, $\Delta Z = -35.67\text{ mm}$ cho mái Tây-Đông).
+    - Độ rộng mỗi cánh $200\text{ mm}$ (tổng bề rộng dải úp nóc $400\text{ mm}$), bề dày tôn dập $1.5 - 2.0\text{ mm}$.
+  - Tấm úp nóc ôm sát khít lấy mặt trên của tấm tôn lợp hai bên sườn mái.
+
+### Nhóm 36: Quy Chuẩn Thép Chữ C Mạ Kẽm Rỗng Thật (True Cold-Formed C-Purlin Solid Discipline)
+* **Hiện tượng lỗi sai**: Sử dụng khối hộp chữ nhật đặc (thép hộp $100\times 50$) để làm đại diện thay thế cho thép chữ C mạ kẽm.
+* **Quy chuẩn bắt buộc**:
+  - **Nghiêm cấm dùng thép hộp thay thế thép chữ C**.
+  - Tiết diện xà gồ mạ kẽm $C100\times 50\times 15\times 1.2\text{ mm}$ phải được dựng đúng 12 đỉnh mặt cắt thép hình dập nguội:
+    - Bụng $H = 100\text{ mm}$, cánh trên/dưới $B = 50\text{ mm}$, mép gấp nẹp gia cường $C = 15\text{ mm}$.
+    - Bề dày thành thép mỏng $t = 1.2\text{ mm}$ chạy đều khép kín.
+    - Đảm bảo tính chất Solid Manifold (`group.manifold? == true`), rỗng ruột đúng $100\%$ thực tế sản phẩm công nghiệp.
+  - Lưng bụng xà gồ tựa lên cánh trên vì kèo, cánh mở hướng lên phía đỉnh nóc để tạo mặt tựa phẳng và không đọng nước.
+
+### Nhóm 37: Quy Chuẩn Kết Cấu Xà Gồ & Kèo Góc Giao Mái Chữ L (L-Junction Jack Purlins & Hip/Valley Framing Standard)
+* **Hiện tượng lỗi sai cơ bản**: Bỏ trống xà gồ ở góc giao chữ L, chỉ dựng xà gồ ở các khoang nhịp thẳng chính khiến toàn bộ phần mái giao (sống nghiêng Hip và xối âm Valley) bị treo lơ lửng không có kết cấu đỡ bên dưới.
+* **Quy chuẩn bắt buộc khắc phục**:
+  1. **Khung Kèo Góc Giao L (`Keo_Khung_Giao_Chu_L`)**:
+     - Bắt buộc có **Thanh kèo sống nghiêng (Hip Rafter $\Box 60\times 120\times 2.0\text{ mm}$)** nối chéo từ góc ngoài chân mái $(4220, 103007, 3715)$ lên đỉnh nóc giao $(7220, 107007, 4250)$.
+     - Bắt buộc có **Thanh kèo xối âm (Valley Rafter $\Box 60\times 120\times 2.0\text{ mm}$)** nối chéo từ góc trong chân mái $(10220, 111007, 3715)$ lên đỉnh nóc giao $(7220, 107007, 4250)$.
+  2. **Hệ Xà Gồ Vát Góc (Jack Purlins)**:
+     - Toàn bộ các đường xà gồ từ nhánh ngang và nhánh dọc phải chạy liên tục vào vùng góc giao chữ L, vát góc chéo (miter cut) tựa khít lên thanh kèo sống nghiêng và thanh kèo xối âm.
+     - Đỡ trọn vẹn $100\%$ diện tích tôn mái góc giao chữ L (`Mai_Giao_Song_Xien_Nam`, `Mai_Giao_Song_Xien_Tay`, `Mai_Giao_Xoi_Am_1`, `Mai_Giao_Xoi_Am_2`).
+     - Tuyệt đối không để trống bất kỳ vị trí nhịp xà gồ nào tại các góc bẻ mái.
+
+### Nhóm 38: Quy Chuẩn Triệt Tiêu Khe Hở Lơ Lửng Giữa Mái Tôn Và Xà Gồ (Zero-Gap Roof-Purlin Interface Standard)
+* **Hiện tượng lỗi sai cơ bản**: Mặt đáy của tấm tôn lợp bị bay lơ lửng, tạo khe hở toác ($10 - 25\text{ mm}$) phía trên mặt lưng của các thanh xà gồ.
+* **Nguyên nhân cốt lõi**:
+  1. **Lệch góc dốc (Slope Divergence)**: Mặt tôn được vẽ theo độ dốc xấp xỉ ($0.13742$) lệch khỏi độ dốc chuẩn xác của vì kèo và xà gồ ($0.13375$), khiến khoảng cách hở tăng dần từ chân mái lên đỉnh nóc.
+  2. **Dời cao độ tùy tiện**: Nâng mái tôn theo cảm tính mà không tính toán chính xác phương trình hình học tiếp xúc mặt bích đỉnh xà gồ.
+  3. **Thiếu xà gồ biên (Eave Purlin) và xà gồ đỉnh nóc (Ridge Purlin)**: Bố trí xà gồ quá thưa hoặc thụt sâu vào trong ($103200$ đến $106400$), khiến mép giọt gianh vươn console hẫng lơ lửng $> 340\text{ mm}$ và đỉnh nóc hẫng $> 600\text{ mm}$ không có xà gồ đỡ và liên kết tấm úp nóc.
+* **Quy chuẩn bắt buộc khắc phục triệt để**:
+  1. **Đồng Bộ Độ Dốc Tuyệt Đối**: Mặt đáy tôn lợp bắt buộc phải mang cùng độ dốc pháp tuyến với cánh trên vì kèo và cánh trên xà gồ:
+     - Nhánh ngang: $s_{\text{ngang}} = \frac{535}{4000} = 0.13375$ ($\alpha = 7.62^\circ$).
+     - Nhánh dọc: $s_{\text{dọc}} = \frac{535}{3000} = 0.17833$ ($\beta = 10.11^\circ$).
+  2. **Tiếp Xúc Khít Khao Zero-Gap ($\text{Gap} \le 0.1\text{ mm}$)**:
+     - Mặt phẳng đáy tấm tôn lợp phải đặt tiếp xúc trực tiếp, phẳng mịn lên cánh trên $50.0\text{ mm}$ của tất cả các thanh xà gồ C100 dựng đứng.
+     - Sai số khe hở kiểm toán hình học bắt buộc: $|\Delta d| \le 0.1\text{ mm}$ trên $100\%$ các điểm kiểm tra.
+  3. **Bố Trí Đầy Đủ Xà Gồ Biên Và Xà Gồ Đỉnh Nóc**:
+     - Khoảng cách từ tim xà gồ biên đến tim dầm biên eave $\le 50 - 100\text{ mm}$ để đỡ vững chắc giọt gianh máng xối.
+     - Khoảng cách từ tim xà gồ nóc đến tim đỉnh nóc $\le 150 - 200\text{ mm}$ để bắt vít ngàm chắc chắn chân tấm úp nóc bẻ gập chữ V.
+     - Bước xà gồ phân bố đều đặn $a \approx 680 - 750\text{ mm}$, đảm bảo khả năng chịu tải trọng gió bão và hoạt tải bảo dưỡng mái.
+
+### Nhóm 39: Quy Chuẩn Đồng Trục Vì Kèo Biên Với Cột Đầu Hồi (Gable Rafter-to-Column Alignment Standard)
+* **Hiện tượng lỗi sai cơ bản**: Vì kèo đầu hồi biên bị đặt lệch tọa độ ra ngoài (ví dụ lệch $100\text{ mm}$), khiến chân kèo và đỉnh kèo bay lơ lửng, không gác lên đầu các cột biên.
+* **Quy chuẩn bắt buộc**:
+  - Tim vì kèo đầu hồi biên bắt buộc phải trùng khít $100\%$ với tim hàng cột đầu hồi:
+    - Đầu hồi biên Đông: Vì kèo $X = 30120.0\text{ mm}$ gác trực tiếp trên 3 cột `Cot_Ngang_10, 11, 12` ($X = 30120.0\text{ mm}$).
+    - Đầu hồi biên Bắc: Vì kèo $Y = 132907.0\text{ mm}$ gác trực tiếp trên 2 cột `Cot_Doc_13, 14` ($Y = 132907.0\text{ mm}$).
+  - Bản mã chân kèo tiếp xúc phẳng $100\%$ với mặt đỉnh bản mã đầu cột tại $Z = 3600.0\text{ mm}$ (biên) và $Z = 4130.0\text{ mm}$ (nóc).
+
+### Nhóm 40: Quy Chuẩn Vì Kèo & Dầm Eave Tiếp Giáp Góc Giao Chữ L (L-Junction Boundary Framing Standard)
+* **Hiện tượng lỗi sai cơ bản**:
+  1. Bỏ sót vì kèo ngang tại trục tiếp giáp vuông góc giữa 2 nhánh nhà kho.
+  2. Bỏ sót dầm biên Eave `Dam_Doc_ST1_Eave` tại chu vi mép ngoài của góc giao chữ L.
+* **Quy chuẩn bắt buộc**:
+  - Tại trục tiếp giáp vuông góc, bắt buộc phải có đầy đủ vì kèo ngang chịu lực:
+    - `Vi_Keo_Ngang_K01_X10120`: Gác trên hàng cột `Cot_Doc_2, 4, 6` ($X = 10120\text{ mm}$).
+    - `Vi_Keo_Doc_K01_Y110907`: Gác trên hàng cột `Cot_Doc_5, 6` ($Y = 110907\text{ mm}$).
+  - Dầm biên eave $\Box 50\times 100\times 1.8\text{ mm}$ (`Dam_Doc_ST1_Eave`) bắt buộc phải khép kín liên tục trên đầu cột ($Z \in [3600, 3700]\text{ mm}$):
+    - Mép Nam góc giao: Nối từ `Cot_Doc_1` ($X = 4380$) đến `Cot_Doc_2` ($X = 10060$) tại $Y = 103107\text{ mm}$.
+    - Mép Tây góc giao: Nối liên tục từ `Cot_Doc_1` đến `Cot_Doc_3` và `Cot_Doc_5` tại $X = 4285\text{ mm}$.
+
+### Nhóm 41: Quy Chuẩn Tôn Úp Nóc 3D Sống Nghiêng & Chạc Ba Đỉnh Nóc Giao Chữ L (3-Way Apex & 3D Hip Ridge Standard)
+* **Hiện tượng lỗi sai cơ bản**: Tấm úp nóc sống nghiêng `Up_Noc_Song_Mai_Xien` bị đùn ngang, chỉ lên tới $Z = 3831\text{ mm}$ rồi cụt lửng; đỉnh giao 3 đường úp nóc bị cắt cụt để hở lỗ thủng lớn.
+* **Quy chuẩn bắt buộc**:
+  - `Up_Noc_Song_Mai_Xien` bắt buộc phải đùn nổi 3D theo vector nghiêng không gian $\vec{u}_{\text{hip}}$, chạy liên tục từ giọt gianh chân mái $Z = 3814.0\text{ mm}$ lên tới đúng đỉnh nóc giao $Z = 4375.8\text{ mm}$.
+  - Tại đỉnh hội tụ 3 ngả $(7220, 107007, 4375.8)$, bắt buộc có nắp chụp chạc 3 úp nóc (`Up_Noc_Chac_Ba_Dinh_Noc`) liên kết phẳng khít, phủ trùm kín nước $100\%$.
+
+### Nhóm 42: Quy Chuẩn Đồng Bộ Kết Cấu Thép Mái Xưởng Gia Công Cơ Khí (Workshop Structural Framing Standard)
+* **Hiện tượng lỗi sai cơ bản**:
+  1. Dầm đỉnh nóc 60x120 bị đặt nằm bẹp ($Z = 60\text{ mm}$ thay vì $Z = 120\text{ mm}$).
+  2. Dầm biên eave không đúng tiết diện $\Box 50\times 100\times 1.8\text{ mm}$.
+  3. Kèo thép mang quá giang và chống đứng làm vướng chiều cao thông thủy gia công và máy móc.
+  4. Xà gồ thép hộp 30x70 đặt nằm bẹp, thưa thớt, tạo khe hở toác với tôn lợp.
+  5. Dùng chung tag với các phân khu khác (`BSQ-CHUNG-*`).
+* **Quy chuẩn bắt buộc thi công & mô hình**:
+  - **Dầm biên Eave**: Bắt buộc dùng thép hộp $\Box 50\times 100\times 1.8\text{ mm}$, chia nhịp giữa các cột biên, đỉnh dầm phẳng khít đầu cột $Z = 3615\text{ mm}$.
+  - **Dầm đỉnh nóc**: Bắt buộc dùng thép hộp $\Box 60\times 120\times 2.0\text{ mm}$, **đặt cạnh 120mm theo phương đứng chịu uốn $Z = 120\text{ mm}$ ($Z \in [4030, 4150]\text{ mm}$)**.
+  - **Hệ vì kèo Open Gable Truss**: Bắt buộc giải phóng toàn bộ không gian bên dưới, loại bỏ `Qua_Giang_Day` và `Chong_Dung_Dinh`.
+  - **Xà gồ C100 dựng đứng & Zero-Gap**: 12 đường xà gồ C100x50x15x1.2mm dựng đứng (bụng 100mm vuông góc mái), bước $a = 720.0\text{ mm}$, tiếp xúc khít khao Zero-gap ($\le 0.1\text{ mm}$) với đáy tôn lợp.
+  - **Giằng vách tôn sau lưng**: 3 tầng xà gồ thép hộp $\Box 50\times 50\times 1.4\text{ mm}$ tại $Z = 1000, 1900, 2800\text{ mm}$ dọc theo Trục A.
+  - **Kỷ luật Tag độc lập**: Toàn bộ cấu kiện phải thuộc về tiền tố `BSQ-GIA-CONG-*`, không dùng tag chung.
+
+### Nhóm 43: Quy Chuẩn Phân Loại Tag Cha - Con & Độc Lập Hóa Cấu Kiện Từng Khu Vực (Tag Folder Hierarchy & Zone Isolation Discipline)
+* **Hiện tượng lỗi sai cơ bản**:
+  1. Gán Tag chung chung (`BSQ-CHUNG-*`) cho nhiều phân khu khác nhau, khiến người dùng khi muốn ẩn một cấu kiện (ví dụ mái che KTX) thì mái che Căn tin và các khu khác cũng bị ẩn theo.
+  2. Bỏ quên các Group/Component cha hoặc container ở tag `Layer0` (Untagged), khiến việc quản lý bật/tắt hiển thị bị xung đột hoặc không thể ẩn toàn bộ cụm công trình với 1 click.
+  3. Để các Tag nằm lộn xộn ngoài khay Tags mà không gom vào Thư mục Cha (Tag Folders) theo phân khu chức năng.
+* **Quy chuẩn bắt buộc**:
+  - **Tổ chức 11 Thư mục Tag Cha - Con chuẩn mực**:
+    + `01. KHU VỆ SINH & NHÀ TẮM`: 10 tags (`BSQ-NVS-*`)
+    + `02. KHU KÝ TÚC XÁ`: 7 tags (`BSQ-KTX-*`)
+    + `03. KHU CĂN TIN & NHÀ BẾP`: 8 tags (`BSQ-CANTIN-*`)
+    + `04. KHU KHO VẬT TƯ TỔNG HỢP`: 11 tags (`BSQ-KHO-BAI-*`)
+    + `05. KHU GIA CÔNG CƠ KHÍ 36X8M`: 11 tags (`BSQ-GIA-CONG-*`)
+    + `06. CỔNG CHÍNH & HÀNG RÀO`: 4 tags (`BSQ-CONG-RAO-*`)
+    + `07. VĂN PHÒNG KHO`: 4 tags (`BSQ-VP-KHO-*`)
+    + `08. HẠ TẦNG NỀN & BÃI XE`: 3 tags (`BSQ-HT-*`)
+    + `09. AN TOÀN & PCCC`: 3 tags (`BSQ-AT-*`)
+    + `10. CẤU KIỆN CHUNG & CONTAINER`: 8 tags (`BSQ-CHUNG-*`)
+    + `11. BẢN VẼ KỸ THUẬT 2D`: 2 tags (`BSQ-2D-*`)
+  - **Cơ chế kiểm soát hiển thị 2 tầng (Two-Tier Visibility)**:
+    + *Tầng 1 (Toàn khu)*: Click con mắt cạnh tên Thư mục hoặc Tag tổng thể (`BSQ-<KHU>-TONG-THE`) để ẩn/hiện toàn bộ công trình trong 1 click.
+    + *Tầng 2 (Bóc tách cấu kiện)*: Mở bung Thư mục để ẩn/hiện độc lập từng cấu kiện kỹ thuật (Móng cọc, Cột thép, Vì kèo, Xà gồ C100 dựng đứng, Mái tôn, Vách tôn, Giằng vách, Nền sàn, Cửa, Thiết bị...).
+  - **Xóa bỏ 100% Group mang Layer0**: Toàn bộ các Group và ComponentInstance trong mô hình phải mang đúng Tag danh tính kỹ thuật. Số lượng Group/Component mang `Layer0` bắt buộc bằng 0.
+  - **Bảo tồn 100% Scene**: Mọi thay đổi hoặc bổ sung Tag phải cập nhật và kế thừa logic hiển thị cho 33 Scene hiện hữu, tuyệt đối không làm vỡ các góc nhìn bản vẽ đã thiết lập.
 
 
 
